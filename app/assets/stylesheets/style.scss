@@ -1,11 +1,11 @@
 h1 {
-	color: red;
-}
-
-.left, .right, .center {
-	@include span-columns(4);
+  color: red;
 }
 
 .container {
-	@include outer-container;
+  @include outer-container;
+}
+
+.col-3 {
+  @include span-columns(4);
 }
