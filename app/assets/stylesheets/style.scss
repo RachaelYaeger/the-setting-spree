@@ -1,3 +1,17 @@
+// GLOBAL VARIABLES ///////////////////////////////////////////////////////////////////////////
+
+$header-height: 60px;
+
+// GENERAL ///////////////////////////////////////////////////////////////////////////
+
 html {
   font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+}
+
+body {
+  margin: 8px 0;
+}
+
+#main-container {
+  padding-top: 60px;
 }

@@ -1,3 +1,11 @@
+//STYLESHEETS////////////////////////////////////////////
+
+
+@import "bourbon";
+@import "neat";
+@import "style";
+@import "header";
+
 //FONTS////////////////////////////////////////////
 
 @include font-face("baskerville",
@@ -8,12 +16,3 @@
                   "baskerville/baskerville-italic", normal, italic,
                   $asset-pipeline: true,
                   $file-formats: ttf);
-
-
-
-//STYLESHEETS////////////////////////////////////////////
-
-
-@import "bourbon";
-@import "neat";
-@import "style";
