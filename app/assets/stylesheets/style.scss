@@ -23,14 +23,45 @@ html {
 }
 
 body {
-  margin: 0.5em 0;
+  margin: 0;
+}
+
+#header-background {
+  position: absolute;
+  background-image: url("/images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%
 }
 
 #main-container {
-  padding-top: 60px;
   max-width: $inner-max-width;
   margin-left: auto;
   margin-right: auto;
+}
+
+.subtext {
+  text-align: center;
+  margin: 0 auto;
+  max-width: ($inner-max-width - 10em);
+}
+
+section#splash {
+  height: 100vh;
+  position: relative;
+  p {
+    padding-top: 36vh;
+  }
+  .expand {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    a {
+        position: relative;
+        left: -50%;
+    }
+  }
 }
 
 h2 {
