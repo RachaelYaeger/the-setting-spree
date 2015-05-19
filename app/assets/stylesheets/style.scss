@@ -61,23 +61,6 @@ button {
   }
 }
 
-section#splash {
-  height: 100vh;
-  position: relative;
-  p {
-    padding-top: 36vh;
-  }
-  .expand {
-    position: absolute;
-    left: 50%;
-    bottom: 40px;
-    a {
-        position: relative;
-        left: -50%;
-    }
-  }
-}
-
 h2 {
   text-align: center;
 }
@@ -96,6 +79,25 @@ a {
 
 .expand {
   text-align: center;  
+}
+
+// SPLASH SECTION ///////////////////////////////////////////////////////////////////////
+
+section#splash {
+  height: 100vh;
+  position: relative;
+  p {
+    padding-top: 36vh;
+  }
+  .expand {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    a {
+        position: relative;
+        left: -50%;
+    }
+  }
 }
 
 
