@@ -1,12 +1,11 @@
 .centered-navigation {
   $base-border-radius: 3px !default;
-  $dark-gray: #333 !default;
-  $base-font-color: $dark-gray !default;
+  // $base-font-color: $dark-grey !default;
   $centered-navigation-padding: 1em;
   $centered-navigation-logo-height: 2em;
   $centered-navigation-background: transparent;
-  $centered-navigation-color: transparentize($base-font-color, 0.3);
-  $centered-navigation-color-hover: $base-font-color;
+  // $centered-navigation-color: transparentize($base-font-color, 0.3);
+  // $centered-navigation-color-hover: $base-font-color;
   $centered-navigation-item-padding: 1em;
   $centered-navigation-item-nudge: 2.2em;
 
@@ -19,16 +18,16 @@
 
   .header-link {
     line-height: $header-height;
-    color: $centered-navigation-color;
+    color: $dark-grey;
     position: absolute;
     font-weight: 700;
     top: 0;
     margin: 0;
     text-decoration: none;
-    &:focus,
-    &:hover {
-      color: $centered-navigation-color-hover;
-    }
+    // &:focus,
+    // &:hover {
+    //   color: $medium-grey;
+    // }
     &:last-child {
       right: 0;
     }
@@ -73,14 +72,14 @@
     z-index: 9999;
 
     a {
-      color: $centered-navigation-color;
+      // color: $dark-grey;
       display: inline-block;
       outline: none;
       text-decoration: none;
 
       &:focus,
       &:hover {
-        color: $centered-navigation-color-hover;
+        // color: $medium-grey;
       }
     }
   }

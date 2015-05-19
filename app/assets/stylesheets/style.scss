@@ -1,37 +1,125 @@
 // GLOBAL VARIABLES ///////////////////////////////////////////////////////////////////////////
 
 $header-height: 60px;
-$base-font-color: #59;
+$dark-grey: #595959;
+$light-grey: #F4F4F4;
+$medium-grey: #BFBEBD;
+
+$show-product-height: 280px;
+$outer-max-width: 68em;
+$inner-max-width: 58em;
 
 // GENERAL ///////////////////////////////////////////////////////////////////////////
 
 html {
+  @mixin box-sizing($box) {
+    @include prefixer(box-sizing, $box, webkit moz spec);
+  }
+  @include clearfix;
   font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  color: $dark-grey;
+  font-size: 16px;
 }
 
 body {
-  margin: 8px 0;
+  margin: 0.5em 0;
 }
 
 #main-container {
   padding-top: 60px;
-  max-width: 58em;
+  max-width: $inner-max-width;
   margin-left: auto;
   margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-grey;
+  &:hover {
+    color: $medium-grey;
+  }
 }
 
 .expand {
-  text-align: center;
-  a {
-    text-decoration: none;  
+  text-align: center;  
+}
+
+.show-product-container {
+  @include clearfix;
+  border-top: 1px solid $medium-grey;
+  border-bottom: 1px solid $medium-grey;
+  padding: 44px 0;
+  margin: 26px 0;
+  .show-product-image {
+    height: $show-product-height;
+    float: left;
+    margin: 0 66px 0 44px;
   }
-  
+  .show-product-text {
+    position: relative;
+    height: $show-product-height;
+    margin-left: 320px;
+    button {
+      position: absolute;
+      bottom: 0;
+    }
+  }
 }
 
 
+
 footer {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  background-color: $light-grey;
+  height: 120px;
+  #footer-container {
+    line-height: 120px;
+    position: relative;
+    max-width: $outer-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    margin: 0;
+    position: absolute;
+    span {
+      margin-left: 6em;
+    }
+  }
+  .email-signup {
+    input {
+      font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+      border: none;
+      outline: none;
+      text-align: center;
+      width: 270px;
+      height: 28px;
+      @include placeholder {
+        color: $medium-grey;
+      }
+    }
+    button {
+      cursor: pointer;
+      font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+      height: 28px;
+      width: 100px;
+      border: none;
+      color: white;
+      background-color: $medium-grey;
+      &:hover {
+        background-color: $dark-grey;
+      }
+    }
+    position: absolute;
+    right: 0;
+  }
 }
 
