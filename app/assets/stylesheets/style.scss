@@ -47,6 +47,20 @@ body {
   max-width: ($inner-max-width - 10em);
 }
 
+button {
+  cursor: pointer;
+  font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  height: 28px;
+  width: 200px;
+  border: none;
+  color: white;
+  background-color: $medium-grey;
+  font-size: 0.8em;
+  &:hover {
+    background-color: $dark-grey;
+  }
+}
+
 section#splash {
   height: 100vh;
   position: relative;
@@ -131,8 +145,11 @@ footer {
     }
   }
   .email-signup {
+    position: absolute;
+    right: 0;
     input {
       font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+      font-size: 0.8em;
       border: none;
       outline: none;
       text-align: center;
@@ -143,19 +160,8 @@ footer {
       }
     }
     button {
-      cursor: pointer;
-      font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
-      height: 28px;
       width: 100px;
-      border: none;
-      color: white;
-      background-color: $medium-grey;
-      &:hover {
-        background-color: $dark-grey;
-      }
     }
-    position: absolute;
-    right: 0;
   }
 }
 
