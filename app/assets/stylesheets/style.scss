@@ -1,6 +1,7 @@
 // GLOBAL VARIABLES ///////////////////////////////////////////////////////////////////////////
 
 $header-height: 60px;
+$base-font-color: #59;
 
 // GENERAL ///////////////////////////////////////////////////////////////////////////
 
@@ -14,4 +15,23 @@ body {
 
 #main-container {
   padding-top: 60px;
+  max-width: 58em;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.expand {
+  text-align: center;
+  a {
+    text-decoration: none;  
+  }
+  
+}
+
+
+footer {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
