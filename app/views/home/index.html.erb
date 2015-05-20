@@ -27,7 +27,7 @@
     <h2>Products</h2>
 
     <div id="show-product">
-      <div class="show-product-container">
+      <div class="show-product-container insert">
         <div class="x"></div>
         <img class="show-product-image" src="/img/product-image-ph-4.jpg" alt="product-image">
         <div class="show-product-text">
@@ -46,12 +46,10 @@
       <!-- Placeholder Data -->
       <div class="product">
         <img class="product-image" src="/img/product-image-ph-4.jpg" alt="">
-        <div class="product-text-container">
         <div class="product-text">
           <p>Custom tea cup</p>
           <p>Painted by hand in SoHo</p>
           <p>$55</p>
-        </div>
         </div>
       </div>
       <div class="product">
@@ -129,8 +127,37 @@
   </section>
 
   <section id="inquiry">
-    <h2>Make an Inquiry</h2>
-    <!-- Determine if we'll use angular or rails form -->
+    <div class="form-container insert">
+      <h2>Make an Inquiry</h2>
+      <!-- Determine if we'll use angular or rails form -->
+      <form action="/form">
+        <input id="test" type="text" placeholder="Name" tabindex="1">
+
+        <div id="dd" class="wrapper-dropdown" tabindex="2">
+          <span>Brand or Individual</span>
+          <ul class="dropdown">
+            <li><a href="javascript:void(0)">Brand</a></li>
+            <li><a href="javascript:void(0)">Individual</a></li>
+          </ul>
+        </div>
+
+        <input type="text" placeholder="How many people" tabindex="3">
+        
+        <div id="dd-2" class="wrapper-dropdown" tabindex="4">
+          <span>Brunch, Afternoon Tea, or Cocktail</span>
+          <ul class="dropdown">
+            <li><a href="javascript:void(0)">Brunch</a></li>
+            <li><a href="javascript:void(0)">Afternoon Tea</a></li>
+            <li><a href="javascript:void(0)">Cocktail</a></li>
+          </ul>
+        </div>
+
+        <input type="text" placeholder="Date + Time" tabindex="5">
+        <input type="text" placeholder="Budget" tabindex="6">
+        <input type="email" placeholder="Email" tabindex="7">
+        <input type="submit" value="Submit" tabindex="8">
+      </form>
+    </div>
   </section>
 
   <section id="insta-feed">

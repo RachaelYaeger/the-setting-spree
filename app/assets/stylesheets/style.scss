@@ -16,7 +16,6 @@ html {
   @mixin box-sizing($box) {
     @include prefixer(box-sizing, $box, webkit moz spec);
   }
-  @include clearfix;
   font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
   color: $dark-grey;
   font-size: 16px;
@@ -48,12 +47,6 @@ section {
   }
 }
 
-.subtext {
-  text-align: center;
-  margin: 0 auto;
-  max-width: ($inner-max-width - 10em);
-}
-
 button {
   cursor: pointer;
   font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
@@ -63,6 +56,7 @@ button {
   color: white;
   background-color: $medium-grey;
   font-size: 0.8em;
+  @include transition(all 0.3s ease-out);
   &:hover {
     background-color: $dark-grey;
   }
@@ -76,17 +70,136 @@ h3 {
   margin: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   color: $dark-grey;
+  @include transition(all 0.3s ease-out);
   &:hover {
     color: $medium-grey;
   }
 }
 
+.insert {
+  @include clearfix;
+  border-top: 1px solid $medium-grey;
+  border-bottom: 1px solid $medium-grey;
+  padding: 44px 0;
+  margin: 26px 0;
+}
+
+.subtext {
+  text-align: center;
+  margin: 0 auto;
+  max-width: ($inner-max-width - 10em);
+}
+
 .expand {
   text-align: center;  
 }
+
+// FORM ///////////////////////////////////////////////////////////////////////
+
+input, .wrapper-dropdown {
+  font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  color: $dark-grey;
+  font-size: 0.8em;
+  border: 1px solid $medium-grey;
+  width: 330px;
+  height: 44px;
+  text-align: center;
+  margin: 12px;
+  outline: none;
+  &:focus {
+    border: 1px solid $dark-grey;
+  }
+  @include placeholder {
+    color: $dark-grey;
+  }
+}
+
+.wrapper-dropdown {
+  position: relative;
+  background-color: white;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 44px;
+  top: -3px;
+  &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      margin-top: -3px;
+      border-width: 6px 6px 0 6px;
+      border-style: solid;
+      border-color: $medium-grey transparent;
+  }
+  &.active {
+    border-bottom: none;
+  }
+  &.active:after {
+      border-width: 0 6px 6px 6px;
+  }
+  &.active .dropdown {
+      opacity: 1;
+      pointer-events: auto;
+  }
+  .dropdown {
+    color: $dark-grey;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    right: -1px;
+    border-left: 1px solid $dark-grey;
+    border-right: 1px solid $dark-grey;
+    z-index: 999999999;
+    background: white;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    // transition: all 0.3s ease-out;
+    a {
+      display: block;
+      text-decoration: none;
+      color: $dark-grey;
+      // padding: 10px;
+      @include transition(all 0.3s ease-out);
+      &:hover {
+        background-color: $light-grey;
+      }
+    }
+    li:last-child {
+      border-bottom: 1px solid $dark-grey;
+    }
+  }
+}
+
+.form-container {
+  padding-top: 0;
+}
+
+form {
+  margin: 0 auto;
+  width: 712px;
+  input[type=submit]{
+    color: white;
+    background-color: $medium-grey;
+    border: none;
+    font-size: 1em;
+    @include transition(all 0.3s ease-out);
+    &:hover {
+      background-color: $dark-grey;
+    }
+  }
+}
+
 
 // SPLASH SECTION ///////////////////////////////////////////////////////////////////////
 
@@ -137,25 +250,18 @@ section#splash {
 
 // SHOW PRODUCT ///////////////////////////////////////////////////////////////////////
 
-.show-product-container {
-  @include clearfix;
-  border-top: 1px solid $medium-grey;
-  border-bottom: 1px solid $medium-grey;
-  padding: 44px 0;
-  margin: 26px 0;
-  .show-product-image {
-    height: $show-product-height;
-    float: left;
-    margin: 0 66px 0 44px;
-  }
-  .show-product-text {
-    position: relative;
-    height: $show-product-height;
-    margin-left: 320px;
-    button {
-      position: absolute;
-      bottom: 0;
-    }
+.show-product-image {
+  height: $show-product-height;
+  float: left;
+  margin: 0 66px 0 44px;
+}
+.show-product-text {
+  position: relative;
+  height: $show-product-height;
+  margin-left: 320px;
+  button {
+    position: absolute;
+    bottom: 0;
   }
 }
 
@@ -197,11 +303,7 @@ footer {
     position: absolute;
     right: 0;
     input {
-      font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
-      font-size: 0.8em;
       border: none;
-      outline: none;
-      text-align: center;
       width: 270px;
       height: 28px;
       @include placeholder {
