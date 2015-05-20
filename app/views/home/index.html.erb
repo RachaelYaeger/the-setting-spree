@@ -1,11 +1,86 @@
-<div class="container">
-  <div class="col-3">
-    <p>to the left</p>
+<header class="centered-navigation" role="banner">
+  <div class="centered-navigation-wrapper">
+    <%= render 'logo' %>
+    <a href="javascript:void(0)" id="js-centered-navigation-menu-btn" class="centered-navigation-menu-btn header-link">Menu</a>
+    <nav role="navigation">
+      <ul id="js-centered-navigation-menu" class="centered-navigation-menu">
+        <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Studio</a></li>
+      </ul>
+    </nav>
+    <a class="header-link" href="#">Cart</a>
   </div>
-  <div class="col-3">
-    <h1>The Setting</h1>
+</header>
+
+<div id="header-background"></div>
+
+<div id="main-container">
+
+  <section id="splash">
+    <p class="subtext">The Setting is a collection of handmade ceramic tableware inspired by the memories shared while entertaining friends and family at home. To us, there is nothing more important than spending time with the people who matter most and no better way to do so than over a beautifully created setting.</p>
+    <div class="expand">
+      <em><a href="#">Shop the Collection</a></em>
+    </div>
+  </section>
+  
+  <section id="products">
+    <h2>Products</h2>
+
+    <div id="show-product">
+      <div class="show-product-container">
+        <div class="x"></div>
+        <img class="show-product-image" src="/images/product-image-ph-4.jpg" alt="product-image">
+        <div class="show-product-text">
+          <h3>Custom Tea Cup</h3>
+          <h4>$55</h4>
+          <p>Approximately 3.5” x 3.5”.</p>
+          <p>Handmade in New York City.<br>
+          Hand wash recommended.<br>
+          Made to order within 6 weeks.</p>
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="products-container">
+      <div class="product">
+        <img class="product-image" src="" alt="">
+        <div class="product-text">
+          <p>Custom tea cup</p>
+          <p>Painted by hand in SoHo</p>
+          <p>$55</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="studio">
+    <img src="" alt="">
+    <h2>Studio</h2>
+    <p class="subtext">Our studio includes a test kitchen bustling with freshly baked goods and special fare for our private events, appointments, and spontaneous gatherings.</p>
+    <div class="expand">
+      <em><a href="javascript:void(0)">Make an inquiry</a></em>
+    </div>
+  </section>
+
+  <section id="inquiry">
+    <h2>Make an Inquiry</h2>
+    <!-- Determine if we'll use angular or rails form -->
+  </section>
+
+  <section id="insta-feed">
+  </section>
+
+</div> <!-- Closes Main Container div -->
+  
+<footer>
+  <div id="footer-container">
+    <em><p>&copy; Copyright 2015 The Setting New York<span>Terms &amp; Conditions</span></p></em>
+    <div class="email-signup">
+      <input type="email" placeholder="Email">
+      <button type="submit">Subscribe</button>
+    </div>
   </div>
-  <div class="col-3">
-    <p>to the right</p>
-  </div>
-</div>
+</footer>
+
