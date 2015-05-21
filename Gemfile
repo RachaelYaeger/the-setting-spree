@@ -59,3 +59,5 @@ gem 'foreman'
 gem 'puma'
 
 gem 'rails_12factor', group: :production
+
+gem 'aws-sdk'
