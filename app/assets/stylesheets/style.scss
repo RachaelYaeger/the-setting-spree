@@ -47,21 +47,6 @@ section {
   }
 }
 
-button {
-  cursor: pointer;
-  font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
-  height: 28px;
-  width: 200px;
-  border: none;
-  color: white;
-  background-color: $medium-grey;
-  font-size: 0.8em;
-  @include transition(all 0.3s ease-out);
-  &:hover {
-    background-color: $dark-grey;
-  }
-}
-
 h2 {
   text-align: center;
 }
@@ -104,8 +89,12 @@ a {
 
 // FORM ///////////////////////////////////////////////////////////////////////
 
+.form-container {
+  padding-top: 0;
+}
+
 input, .wrapper-dropdown {
-  font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  font-family: inherit;
   color: $dark-grey;
   font-size: 0.8em;
   border: 1px solid $medium-grey;
@@ -183,10 +172,6 @@ input, .wrapper-dropdown {
   }
 }
 
-.form-container {
-  padding-top: 0;
-}
-
 form {
   margin: 0 auto;
   width: 712px;
@@ -198,10 +183,11 @@ form {
     @include transition(all 0.3s ease-out);
     &:hover {
       background-color: $dark-grey;
+      cursor: pointer;
     }
   }
   textarea {
-    font-family: baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+    font-family: inherit;
     font-size: 0.8em;
     border: 1px solid $medium-grey;
     outline: none;
@@ -221,6 +207,21 @@ form {
     }
   }
 
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  height: 28px;
+  width: 200px;
+  border: none;
+  color: white;
+  background-color: $medium-grey;
+  font-size: 0.8em;
+  @include transition(all 0.3s ease-out);
+  &:hover {
+    background-color: $dark-grey;
+  }
 }
 
 
