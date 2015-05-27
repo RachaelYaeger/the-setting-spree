@@ -81,6 +81,7 @@
 
       &:focus,
       &:hover {
+        text-decoration: underline;
         // color: $medium-grey;
       }
     }

@@ -29,6 +29,8 @@ gem 'bourbon'
 gem 'neat'
 # Hide API keys
 gem 'figaro'
+# Makes http requests
+gem 'httparty'
 
 
 # Use ActiveModel has_secure_password
