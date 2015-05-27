@@ -321,7 +321,43 @@ section#splash {
 }
 
 
-// FOOTER ////////////////////////////////////////////////////////////////////////////////
+// CART //////////////////////////////////////////////////////////////////////////////////////
+
+#space-holder {
+  display: none;
+  position: relative;
+  height: 160px;
+}
+
+#cart {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  background-color: $light-grey;
+  height: 160px;
+  width: 100%;
+  top: 0;
+  margin: 0;
+}
+
+#cart-container {
+  position: relative;
+  max-width: $outer-max-width;
+  margin: 0 auto;
+  p {
+    margin: 0;
+    padding: 70px 0;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    top: 65px;
+  }
+}
+
+
+
+// FOOTER ////////////////////////////////////////////////////////////////////////////////////
 
 footer {
   width: 100%;

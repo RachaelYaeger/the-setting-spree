@@ -29,7 +29,6 @@ $(function() {
 
   $(document).click(function() {
     // all dropdowns
-    console.log("removes active");
     $('.wrapper-dropdown').removeClass('active');
   });
 
