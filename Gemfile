@@ -27,7 +27,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bourbon'
 # neat grids
 gem 'neat'
-
+# Hide API keys
+gem 'figaro'
+# Makes http requests
+gem 'httparty'
 
 
 # Use ActiveModel has_secure_password

@@ -63,9 +63,9 @@ ul {
 a {
   text-decoration: none;
   color: $dark-grey;
-  @include transition(all 0.3s ease-out);
+  // @include transition(all 0.3s ease-out);
   &:hover {
-    color: $medium-grey;
+    text-decoration: underline;
   }
 }
 
@@ -302,6 +302,24 @@ section#splash {
 #studio p {
   margin: 3em auto;
 }
+
+
+// INSTA FEED ////////////////////////////////////////////////////////////////////////////////
+
+#insta-feed {
+  padding-bottom: 120px;
+}
+
+#insta-images-container {
+  margin: 2em 0 1em; 
+}
+
+.insta-img {
+  width: 121px;
+  display: inline-block;
+  margin: 0 15px 30px;
+}
+
 
 // FOOTER ////////////////////////////////////////////////////////////////////////////////
 

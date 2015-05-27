@@ -158,7 +158,15 @@
   </section>
 
   <section id="insta-feed">
-  <h2>@thesettingnyc</h2>
+    <h2>@thesettingnyc</h2>
+    <div id="insta-images-container">
+      <% @images.each do |image| %>
+        <%= image_tag image, class: 'insta-img' %>
+      <% end %>
+    </div>
+    <div class="expand">
+      <em><a href="#">Show More</a></em>
+    </div>
   </section>
 
 </div> <!-- Closes Main Container div -->
