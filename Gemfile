@@ -62,4 +62,4 @@ gem 'puma'
 
 gem 'rails_12factor', group: :production
 
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
