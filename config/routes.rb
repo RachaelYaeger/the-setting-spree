@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  # root 'home#index'
 
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
