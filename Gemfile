@@ -27,10 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bourbon'
 # neat grids
 gem 'neat'
-# Hide API keys
-gem 'figaro'
-# Makes http requests
-gem 'httparty'
+
 
 
 # Use ActiveModel has_secure_password
@@ -51,6 +48,8 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   # gem 'spring'
+
+  gem 'figaro'
 end
 
 
