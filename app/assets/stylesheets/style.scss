@@ -259,6 +259,7 @@ section#splash {
     opacity: 1;
     @include transition(opacity 0.5s ease-out);
     width: 199px;
+    height: 133px;
     position: absolute;
   }
   .product-text {
