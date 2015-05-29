@@ -28,7 +28,7 @@
       <div id="product_<%= product.id %>" class="product-list-item product" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
         <div class="panel panel-default">
           <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
-            <%= link_to small_image(product, itemprop: "image", class: 'product-image'), url, itemprop: 'url' %><br/>
+            <%= link_to small_image(product, itemprop: "image", class: 'product-image'), '#', :onclick => 'showProduct()' %><br/>
             <div class="panel-body text-center product-body product-text">
               <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %>
                 <div class="panel-footer text-center">
