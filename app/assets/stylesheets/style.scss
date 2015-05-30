@@ -338,7 +338,94 @@ section#splash {
 }
 
 
-// FOOTER ////////////////////////////////////////////////////////////////////////////////
+// CART //////////////////////////////////////////////////////////////////////////////////////
+
+#space-holder {
+  display: none;
+  position: relative;
+  height: 160px;
+}
+
+#cart {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  background-color: $light-grey;
+  // height: 160px;
+  width: 100%;
+  top: 0;
+  margin: 0;
+}
+
+#cart-container {
+  position: relative;
+  max-width: $outer-max-width;
+  margin: 0 auto;
+  p {
+    margin: 0;
+    padding: 71px 0;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    top: 65px;
+  }
+}
+
+#checkout-wrapper {
+  input {
+    border: none;
+    width: 500px;
+  }
+  input[type=checkbox]{
+    width: initial;
+    height: initial;
+  }
+  button {
+    width: 500px;
+    height: 44px;
+    margin: 12px;
+  }
+}
+
+#login-container {
+  width: 500px;
+  margin: 0 auto;
+  nav {
+    margin: 0 12px;
+    .tab-current {
+      border: 1px solid $medium-grey;
+      border-bottom: none;
+      border-radius: 10px;
+    }
+  }
+  nav > ul > li {
+    font-size: 1.5em;
+    display: inline;
+    padding: 0.5em 1em;
+  }
+  .login-links {
+    position: relative;
+    margin-left: 12px;
+    width: 500px;
+    height: 50px;
+    a {
+      line-height: 36px;
+      position: absolute;
+      left: 4em;
+      font-size: 0.75em;
+    }
+    label {
+      position: absolute;
+      right: 4em;
+      font-size: 0.75em;
+    }
+  }
+}
+
+
+
+// FOOTER ////////////////////////////////////////////////////////////////////////////////////
 
 footer {
   width: 100%;
