@@ -97,7 +97,7 @@ input, .wrapper-dropdown {
   font-family: inherit;
   color: $dark-grey;
   font-size: 0.8em;
-  border: 1px solid $medium-grey;
+  border: none;
   width: 330px;
   height: 44px;
   text-align: center;
@@ -105,12 +105,21 @@ input, .wrapper-dropdown {
   margin: 12px;
   outline: none;
   display: inline-block;
-  &:focus {
-    border: 1px solid $dark-grey;
-  }
   @include placeholder {
     color: $dark-grey;
   }
+}
+
+#inquiry input, .wrapper-dropdown {
+  border: 1px solid $medium-grey;
+  &:focus {
+    border: 1px solid $dark-grey;
+  }
+}
+
+input[type=checkbox]{
+  width: initial;
+  height: initial;
 }
 
 .wrapper-dropdown {
@@ -178,7 +187,7 @@ form {
   input[type=submit]{
     color: white;
     background-color: $medium-grey;
-    border: none;
+    // border: none;
     font-size: 1em;
     @include transition(all 0.3s ease-out);
     &:hover {
@@ -297,15 +306,6 @@ section#splash {
   width: initial;
 }
 
-.quantity-number {
-  border: none;
-  width: 36px;
-  height: 1.5em;
-  &:focus {
-    border: none;
-  }
-}
-
 
 // STUDIO ////////////////////////////////////////////////////////////////////////////////
 
@@ -374,12 +374,8 @@ section#splash {
 
 #checkout-wrapper {
   input {
-    border: none;
+    // border: none;
     width: 500px;
-  }
-  input[type=checkbox]{
-    width: initial;
-    height: initial;
   }
   button {
     width: 500px;
@@ -449,7 +445,7 @@ footer {
     position: absolute;
     right: 0;
     input {
-      border: none;
+      // border: none;
       width: 270px;
       height: 28px;
       @include placeholder {
@@ -460,5 +456,24 @@ footer {
       width: 100px;
     }
   }
+}
+
+// CHECKOUT ////////////////////////////////////////////////////////////////////////////////////
+
+#checkout-body, #checkout-cart {
+  background-color: $light-grey;
+}
+
+#checkout {
+  position: relative;
+  max-width: $outer-max-width;
+  margin: 0 auto;
+}
+
+#checkout-summary {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 46px 0;
 }
 
