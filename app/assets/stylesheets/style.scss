@@ -374,7 +374,7 @@ section#splash {
 }
 .show-product-text {
   position: relative;
-  height: $show-product-height;
+  // height: $show-product-height;
   margin-left: 320px;
   button {
     // position: absolute;
@@ -445,6 +445,7 @@ section#splash {
   max-width: $outer-max-width;
   margin: 0 auto;
   p {
+    position: absolute;
     margin: 0;
     padding: 71px 0;
   }
@@ -465,6 +466,12 @@ section#splash {
     height: 44px;
     margin: 12px;
   }
+}
+
+#cart-item-container {
+  width: 580px;
+  margin: 0 auto;
+  padding: 19px;
 }
 
 #login-container {
@@ -524,6 +531,10 @@ section#splash {
   }
 }
 
+.cart-item-image, .line-item {
+  display: inline;
+  margin-right: 0.5em;
+}
 
 
 // FOOTER ////////////////////////////////////////////////////////////////////////////////////
@@ -574,6 +585,8 @@ footer {
   max-width: $outer-max-width;
   margin: 0 auto;
   padding-bottom: 2em;
+  border-top: 1px solid $medium-grey;
+  padding-top: 3em;
 }
 
 #checkout-summary {
