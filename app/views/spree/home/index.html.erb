@@ -55,10 +55,10 @@
   </div>
 </section>
 
-
-<header class="centered-navigation" role="banner">
+<%= render 'header' %>
+<!-- <header class="centered-navigation" role="banner">
   <div class="centered-navigation-wrapper">
-    <%= render '/home/logo' %>
+    <%#= render '/home/logo' %>
     <a href="javascript:void(0)" id="js-centered-navigation-menu-btn" class="centered-navigation-menu-btn header-link">Menu</a>
     <nav role="navigation">
       <ul id="js-centered-navigation-menu" class="centered-navigation-menu">
@@ -68,7 +68,7 @@
     </nav>
     <a id="cart-link" class="header-link" href="#">Cart</a>
   </div>
-</header>
+</header> -->
 
 
 <div id="header-background"></div>
@@ -235,8 +235,9 @@
   </section>
 
 </div> <!-- Closes Main Container div -->
-  
-<footer>
+ 
+<%= render 'footer' %> 
+<!-- <footer>
   <div id="footer-container">
     <em><p>&copy; Copyright 2015 The Setting New York<span>Terms &amp; Conditions</span></p></em>
     <div class="email-signup">
@@ -244,7 +245,7 @@
       <button type="submit">Subscribe</button>
     </div>
   </div>
-</footer>
+</footer> -->
 
 
 

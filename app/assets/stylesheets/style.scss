@@ -40,10 +40,16 @@ body {
   width: 100%
 }
 
-#main-container {
+#main-container, #show-product {
   max-width: $inner-max-width;
   margin-left: auto;
   margin-right: auto;
+}
+
+#show-product {
+  padding-top: 120px;
+  height: 100vh;
+  margin-bottom: -120px;
 }
 
 section {
@@ -374,12 +380,11 @@ section#splash {
 }
 .show-product-text {
   position: relative;
-  // height: $show-product-height;
-  margin-left: 320px;
+  height: $show-product-height;
+  margin-left: 530px;
   button {
-    // position: absolute;
-    // bottom: 0;
-    // left: 70px;
+    position: absolute;
+    bottom: 0;
     display: block;
   }
 }
