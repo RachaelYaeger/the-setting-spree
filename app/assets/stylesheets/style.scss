@@ -555,17 +555,26 @@ section#splash {
 
 // LOGIN ////////////////////////////////////////////////////////////////////////////////////
 
-#registration {
+#login, #signup, #registration {
+  padding-top: 3em;
   text-align: center;
   background-color: $light-grey;
-  padding-bottom: 2em;
+  // padding-bottom: 2em;
+  height: 100vh;
+  hr {
+    display: none;
+  }
+  .checkbox {
+    margin: 1em 0;
+  }
+}
+
+#registration > .col-md-6 {
+  display: none;
 }
 
 h1 {
-  margin: 0;
-  padding: 2em 0;
-  background-color: $light-grey;
-  text-align: center;
+  display: none;
 }
 
 fieldset {
