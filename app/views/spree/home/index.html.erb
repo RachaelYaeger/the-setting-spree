@@ -3,12 +3,9 @@
 <section id="cart">
   <div id="cart-container">
     <p>You have these products in your cart:</p>
-
     <!-- Add Order Edit content here -->
     <div id="cart-item-container" data-hook="cart_container">
       <!-- <h1><%#= Spree.t(:shopping_cart) %></h1> -->
-
-
       <% if @order.line_items.empty? %>
 <!--         <div data-hook="empty_cart">
           <div class="alert alert-info"><%#= Spree.t(:your_cart_is_empty) %></div>
@@ -36,7 +33,6 @@
             </div>
           <% end %>
         </div>
-
 <!--         <div id="empty-cart" class="col-md-6 pull-left" data-hook>
           <%#= form_tag empty_cart_path, method: :put do %>
             <p id="clear_cart_link" data-hook>
@@ -48,7 +44,6 @@
         </div> -->
       <% end %>
     </div>
-
     <form action="/checkout">
       <button type="submit">Check Out | $59</button>
     </form>
@@ -56,28 +51,12 @@
 </section>
 
 <%= render 'header' %>
-<!-- <header class="centered-navigation" role="banner">
-  <div class="centered-navigation-wrapper">
-    <%#= render '/home/logo' %>
-    <a href="javascript:void(0)" id="js-centered-navigation-menu-btn" class="centered-navigation-menu-btn header-link">Menu</a>
-    <nav role="navigation">
-      <ul id="js-centered-navigation-menu" class="centered-navigation-menu">
-        <li class="nav-link"><a href="#products">Products</a></li>
-        <li class="nav-link"><a href="#studio">Studio</a></li>
-      </ul>
-    </nav>
-    <a id="cart-link" class="header-link" href="#">Cart</a>
-  </div>
-</header> -->
-
-
-<div id="header-background"></div>
-
+<div id="splash-background"></div>
 <div id="main-container">
 
   <section id="splash">
-    <p class="subtext">The Setting is a collection of handmade ceramic tableware inspired by the memories shared while entertaining friends and family at home. To us, there is nothing more important than spending time with the people who matter most and no better way to do so than over a beautifully created setting.</p>
-    <div class="expand">
+    <p class="splash-text centered">The Setting is a collection of handmade ceramic tableware inspired by the memories shared while entertaining friends and family at home. To us, there is nothing more important than spending time with the people who matter most and no better way to do so than over a beautifully created setting.</p>
+    <div class="expand centered">
       <em><a href="#products">Shop the Collection</a></em>
     </div>
   </section>
@@ -85,7 +64,6 @@
   <section id="products-section">
     <h2 id="products-title">Tabletop</h2>
     <h5>Handmade in NYC</h5>
-
 <!--     <div id="show-product">
       <div class="show-product-container insert">
         <div class="x"></div>
@@ -101,82 +79,11 @@
         </div>
       </div>
     </div> -->
-
     <div data-hook="homepage_products">
       <% cache(cache_key_for_products) do %>
         <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
       <% end %>
     </div>
-
-    <!-- <div class="products-container"> -->
-      <!-- Placeholder Product Data -->
-<!--       <div class="product">
-        <img class="product-image" src="/img/product-image-ph-4.jpg" alt="">
-        <div class="product-text">
-          <p>Custom tea cup</p>
-          <p>Painted by hand in SoHo</p>
-          <p>$55</p>
-        </div>
-      </div>
-      <div class="product">
-        <img class="product-image" src="/img/product-image-ph-2.jpg" alt="">
-        <div class="product-text">
-          <p>Custom tea cup</p>
-          <p>Painted by hand in SoHo</p>
-          <p>$55</p>
-        </div>
-      </div>
-      <div class="product">
-        <img class="product-image" src="/img/product-image-ph-4.jpg" alt="">
-        <div class="product-text">
-          <p>Custom tea cup</p>
-          <p>Painted by hand in SoHo</p>
-          <p>$55</p>
-        </div>
-      </div>
-      <div class="product">
-        <img class="product-image" src="/img/product-image-ph-2.jpg" alt="">
-        <div class="product-text">
-          <p>Custom tea cup</p>
-          <p>Painted by hand in SoHo</p>
-          <p>$55</p>
-        </div>
-      </div>
-      <div class="product">
-        <img class="product-image" src="/img/product-image-ph-2.jpg" alt="">
-        <div class="product-text">
-          <p>Custom tea cup</p>
-          <p>Painted by hand in SoHo</p>
-          <p>$55</p>
-        </div>
-      </div>
-      <div class="product">
-        <img class="product-image" src="/img/product-image-ph-4.jpg" alt="">
-        <div class="product-text">
-          <p>Custom tea cup</p>
-          <p>Painted by hand in SoHo</p>
-          <p>$55</p>
-        </div>
-      </div>
-      <div class="product">
-        <img class="product-image" src="/img/product-image-ph-2.jpg" alt="">
-        <div class="product-text">
-          <p>Custom tea cup</p>
-          <p>Painted by hand in SoHo</p>
-          <p>$55</p>
-        </div>
-      </div>
-      <div class="product">
-        <img class="product-image" src="/img/product-image-ph-4.jpg" alt="">
-        <div class="product-text">
-          <p>Custom tea cup</p>
-          <p>Painted by hand in SoHo</p>
-          <p>$55</p>
-        </div>
-      </div>
-    </div> -->
-    <!-- End Placeholder Product Data -->
-
   </section>
 
   <section id="studio">
@@ -187,7 +94,7 @@
       <img src="img/studio-slide-2.jpg" alt="">
     </div>
     <p class="subtext">Our studio includes a test kitchen bustling with freshly baked goods and special fare for our private events, appointments, and spontaneous gatherings.</p>
-    <div class="expand">
+    <div class="expand centered">
       <em><a href="javascript:void(0)">Make an inquiry</a></em>
     </div>
   </section>
@@ -229,7 +136,7 @@
         <%= image_tag image, class: 'insta-img' %>
       <% end %>
     </div>
-    <div class="expand">
+    <div class="expand centered">
       <em><a href="#">Show More</a></em>
     </div>
   </section>
@@ -237,17 +144,6 @@
 </div> <!-- Closes Main Container div -->
  
 <%= render 'footer' %> 
-<!-- <footer>
-  <div id="footer-container">
-    <em><p>&copy; Copyright 2015 The Setting New York<span>Terms &amp; Conditions</span></p></em>
-    <div class="email-signup">
-      <input type="email" placeholder="Email">
-      <button type="submit">Subscribe</button>
-    </div>
-  </div>
-</footer> -->
-
-
 
 <%# content_for :sidebar do %>
   <!-- <div data-hook="homepage_sidebar_navigation"> -->

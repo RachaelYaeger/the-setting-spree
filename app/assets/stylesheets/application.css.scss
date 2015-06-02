@@ -1,13 +1,13 @@
 //STYLESHEETS////////////////////////////////////////////
 
-
 @import "bourbon";
 @import "neat";
 @import "style";
 @import "header";
+@import "footer";
 @import "sss";
 
-//FONTS////////////////////////////////////////////
+//FONTS/////////////////////////////////////////////////
 
 @include font-face("baskerville",
                   "baskerville/baskerville",

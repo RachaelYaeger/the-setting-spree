@@ -30,7 +30,7 @@
           <% cache(@taxon.present? ? [I18n.locale, current_currency, @taxon, product] : [I18n.locale, current_currency, product]) do %>
           <!-- Was testing adding :onclick => 'showProduct()' below to get jquery to load show product on index page. Reverted to load show product page for now.-->
             <%= link_to small_image(product, itemprop: "image", class: 'product-image'), url %><br/>
-            <div class="panel-body text-center product-body product-text">
+            <div class="panel-body text-center product-body product-text centered">
               <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %>
                 <div class="panel-footer text-center">
                   <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
