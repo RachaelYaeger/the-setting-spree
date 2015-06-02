@@ -59,8 +59,13 @@ section {
   }
 }
 
-h2 {
+h2, h5 {
   text-align: center;
+  font-weight: normal;
+}
+
+h5 {
+  margin-top: 0;
 }
 
 h3 {
@@ -343,6 +348,10 @@ section#splash {
 }
 
 // PRODUCTS ///////////////////////////////////////////////////////////////////////
+
+#products-title {
+  margin-bottom: 0.2em;
+}
 
 .product {
   display: inline-block;

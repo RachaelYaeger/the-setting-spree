@@ -83,9 +83,10 @@
   </section>
   
   <section id="products-section">
-    <h2>Products</h2>
+    <h2 id="products-title">Tabletop</h2>
+    <h5>Handmade in NYC</h5>
 
-    <div id="show-product">
+<!--     <div id="show-product">
       <div class="show-product-container insert">
         <div class="x"></div>
         <img class="show-product-image" src="/img/product-image-ph-4.jpg" alt="product-image">
@@ -99,7 +100,7 @@
           <button>Add to cart</button>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div data-hook="homepage_products">
       <% cache(cache_key_for_products) do %>
@@ -194,30 +195,29 @@
   <section id="inquiry">
     <div class="form-container insert">
       <h2>Make an Inquiry</h2>
-      <!-- Determine if we'll use angular or rails form -->
       <form id="inquiry-form" action="/form">
         <input id="test" type="text" placeholder="Name" tabindex="1">
-        <div id="dd" class="wrapper-dropdown" tabindex="2">
-          <span>Brand or Individual</span>
-          <ul class="dropdown">
-            <li><a href="javascript:void(0)">Brand</a></li>
-            <li><a href="javascript:void(0)">Individual</a></li>
-          </ul>
-        </div>
-        <input type="text" placeholder="How many people" tabindex="3">
-        <div id="dd-2" class="wrapper-dropdown" tabindex="4">
+        <input type="email" placeholder="Email" tabindex="2">
+        <input type="text" placeholder="Date + Time" tabindex="3">
+        <input type="text" placeholder="Budget" tabindex="4">
+        <!-- <input type="text" placeholder="How many people" tabindex="3"> -->
+<!--         <div id="dd-2" class="wrapper-dropdown" tabindex="4">
           <span>Brunch, Afternoon Tea, or Cocktail</span>
           <ul class="dropdown">
             <li><a href="javascript:void(0)">Brunch</a></li>
             <li><a href="javascript:void(0)">Afternoon Tea</a></li>
             <li><a href="javascript:void(0)">Cocktail</a></li>
           </ul>
+        </div> -->
+        <textarea name="message" placeholder="Message" tabindex="5"></textarea>
+        <div id="dd" class="wrapper-dropdown" tabindex="6">
+          <span>Brand or Individual</span>
+          <ul class="dropdown">
+            <li><a href="javascript:void(0)">Brand</a></li>
+            <li><a href="javascript:void(0)">Individual</a></li>
+          </ul>
         </div>
-        <input type="text" placeholder="Date + Time" tabindex="5">
-        <input type="text" placeholder="Budget" tabindex="6">
-        <textarea name="message" placeholder="Message" tabindex="7"></textarea>
-        <input type="email" placeholder="Email" tabindex="8">
-        <input type="submit" value="Submit" tabindex="9">
+        <input type="submit" value="Submit" tabindex="7">
       </form>
     </div>
   </section>
