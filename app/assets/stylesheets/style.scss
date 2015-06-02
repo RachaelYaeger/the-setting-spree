@@ -609,7 +609,10 @@ footer {
 }
 
 h1 {
-  display: none;
+  margin: 0;
+  padding: 2em 0;
+  background-color: $light-grey;
+  text-align: center;
 }
 
 
