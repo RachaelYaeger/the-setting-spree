@@ -21,6 +21,12 @@ html {
   font-size: 16px;
 }
 
+// *, *:before, *:after {
+//   @mixin box-sizing($box) {
+//     @include prefixer(box-sizing, $box, webkit moz spec);
+//   }
+// }
+
 body {
   margin: 0;
 }
@@ -60,6 +66,10 @@ ul {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   color: $dark-grey;
@@ -89,28 +99,104 @@ a {
 
 // FORM ///////////////////////////////////////////////////////////////////////
 
+
+// INQUIRY FORM
+
+#inquiry-form {
+  input, .wrapper-dropdown {
+    margin: 6px 12px 0;
+    width: 330px;
+    margin: 12px;
+    border: 1px solid $medium-grey;
+    &:focus {
+      border: 1px solid $dark-grey;
+    }
+  }
+  .dropdown {
+    border-left: 1px solid $dark-grey;
+    border-right: 1px solid $dark-grey;
+    overflow: visible;
+    height: initial;
+  }
+}
+
 .form-container {
   padding-top: 0;
+}
+
+// CHECKOUT FORM
+
+.form-group {
+  display: inline-block;
+}
+
+label {
+  margin-left: 12px;
 }
 
 input, .wrapper-dropdown {
   font-family: inherit;
   color: $dark-grey;
   font-size: 0.8em;
-  border: 1px solid $medium-grey;
-  width: 330px;
+  border: none;
+  width: 438px;
   height: 44px;
   text-align: center;
   padding: 0;
-  margin: 12px;
+  margin: 6px 12px 0;
   outline: none;
   display: inline-block;
-  &:focus {
-    border: 1px solid $dark-grey;
-  }
   @include placeholder {
     color: $dark-grey;
   }
+}
+
+.form-full-width {
+  width: 904px;
+}
+
+.panel-title {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.field {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+
+// SPECIAL FIELD SIZES
+
+.city-field {
+  width: 190px;
+}
+
+.state-field {
+  width: 112px;
+}
+
+.zipcode-field {
+  width: 80px;
+}
+
+.small-cc-field {
+  width: 201px;
+}
+
+
+
+
+input[type=checkbox], input[type=radio]{
+  width: initial;
+  height: initial;
 }
 
 .wrapper-dropdown {
@@ -148,13 +234,15 @@ input, .wrapper-dropdown {
     top: 100%;
     left: -1px;
     right: -1px;
-    border-left: 1px solid $dark-grey;
-    border-right: 1px solid $dark-grey;
+    border-left: none;
+    border-right: none;
     z-index: 999999999;
     background: white;
-    list-style: none;
+    // list-style: none;
     opacity: 0;
     pointer-events: none;
+    overflow: scroll;
+    height: 100px;
     // transition: all 0.3s ease-out;
     a {
       display: block;
@@ -172,13 +260,17 @@ input, .wrapper-dropdown {
   }
 }
 
+#inquiry-form {
+  width: 712px;
+}
+
 form {
   margin: 0 auto;
-  width: 712px;
+  width: $inner-max-width;
   input[type=submit]{
     color: white;
     background-color: $medium-grey;
-    border: none;
+    // border: none;
     font-size: 1em;
     @include transition(all 0.3s ease-out);
     &:hover {
@@ -282,7 +374,7 @@ section#splash {
 }
 .show-product-text {
   position: relative;
-  height: $show-product-height;
+  // height: $show-product-height;
   margin-left: 320px;
   button {
     // position: absolute;
@@ -295,15 +387,6 @@ section#splash {
 #cart-form > form {
   margin: 0;
   width: initial;
-}
-
-.quantity-number {
-  border: none;
-  width: 36px;
-  height: 1.5em;
-  &:focus {
-    border: none;
-  }
 }
 
 
@@ -362,6 +445,7 @@ section#splash {
   max-width: $outer-max-width;
   margin: 0 auto;
   p {
+    position: absolute;
     margin: 0;
     padding: 71px 0;
   }
@@ -374,18 +458,20 @@ section#splash {
 
 #checkout-wrapper {
   input {
-    border: none;
+    // border: none;
     width: 500px;
-  }
-  input[type=checkbox]{
-    width: initial;
-    height: initial;
   }
   button {
     width: 500px;
     height: 44px;
     margin: 12px;
   }
+}
+
+#cart-item-container {
+  width: 580px;
+  margin: 0 auto;
+  padding: 19px;
 }
 
 #login-container {
@@ -423,6 +509,32 @@ section#splash {
   }
 }
 
+// PAYMENT ////////////////////////////////////////////////////////////////////////////////////
+
+#payment {
+  #payment-method-fields {
+    // text-align: center;
+    label {
+      margin-left: 0;
+      margin-right: 0.5em;
+    }
+  }
+  li {
+    display: inline;
+  }
+  h4 {
+    text-align: center;
+  }
+  .list-group {
+    text-align: center;
+    margin: 2em 0;
+  }
+}
+
+.cart-item-image, .line-item {
+  display: inline;
+  margin-right: 0.5em;
+}
 
 
 // FOOTER ////////////////////////////////////////////////////////////////////////////////////
@@ -449,7 +561,7 @@ footer {
     position: absolute;
     right: 0;
     input {
-      border: none;
+      // border: none;
       width: 270px;
       height: 28px;
       @include placeholder {
@@ -460,5 +572,27 @@ footer {
       width: 100px;
     }
   }
+}
+
+// CHECKOUT ////////////////////////////////////////////////////////////////////////////////////
+
+#checkout-body, #checkout-cart {
+  background-color: $light-grey;
+}
+
+#checkout {
+  position: relative;
+  max-width: $outer-max-width;
+  margin: 0 auto;
+  padding-bottom: 2em;
+  border-top: 1px solid $medium-grey;
+  padding-top: 3em;
+}
+
+#checkout-summary {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 46px 0;
 }
 
