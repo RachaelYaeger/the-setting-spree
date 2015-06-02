@@ -66,6 +66,10 @@ ul {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   color: $dark-grey;
@@ -100,6 +104,7 @@ a {
 
 #inquiry-form {
   input, .wrapper-dropdown {
+    margin: 6px 12px 0;
     width: 330px;
     margin: 12px;
     border: 1px solid $medium-grey;
@@ -162,7 +167,34 @@ input, .wrapper-dropdown {
   text-align: center;
 }
 
-input[type=checkbox]{
+.field {
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+
+// SPECIAL FIELD SIZES
+
+.city-field {
+  width: 190px;
+}
+
+.state-field {
+  width: 112px;
+}
+
+.zipcode-field {
+  width: 80px;
+}
+
+.small-cc-field {
+  width: 201px;
+}
+
+
+
+
+input[type=checkbox], input[type=radio]{
   width: initial;
   height: initial;
 }
@@ -206,11 +238,11 @@ input[type=checkbox]{
     border-right: none;
     z-index: 999999999;
     background: white;
-    list-style: none;
+    // list-style: none;
     opacity: 0;
     pointer-events: none;
     overflow: scroll;
-    height: 200px;
+    height: 100px;
     // transition: all 0.3s ease-out;
     a {
       display: block;
@@ -470,6 +502,28 @@ section#splash {
   }
 }
 
+// PAYMENT ////////////////////////////////////////////////////////////////////////////////////
+
+#payment {
+  #payment-method-fields {
+    // text-align: center;
+    label {
+      margin-left: 0;
+      margin-right: 0.5em;
+    }
+  }
+  li {
+    display: inline;
+  }
+  h4 {
+    text-align: center;
+  }
+  .list-group {
+    text-align: center;
+    margin: 2em 0;
+  }
+}
+
 
 
 // FOOTER ////////////////////////////////////////////////////////////////////////////////////
@@ -519,6 +573,7 @@ footer {
   position: relative;
   max-width: $outer-max-width;
   margin: 0 auto;
+  padding-bottom: 2em;
 }
 
 #checkout-summary {

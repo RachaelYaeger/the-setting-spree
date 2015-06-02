@@ -16,6 +16,10 @@ module Spree
       data = resp["data"]
       data.take(6).each do |obj|
         @images << obj["images"]["low_resolution"]["url"]
+
+      # Cart logic for order. Comes from Spree OrdersController edit action
+        @order = current_order || Order.incomplete.find_or_initialize_by(guest_token: cookies.signed[:guest_token])
+        associate_user
       end
       
     end
