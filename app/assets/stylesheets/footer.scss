@@ -1,0 +1,36 @@
+// FOOTER ////////////////////////////////////////////////////////////////////////////////////
+
+footer {
+  width: 100%;
+  background-color: $light-grey;
+  height: 120px;
+  #footer-container {
+    line-height: 120px;
+    position: relative;
+    max-width: $outer-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    margin: 0;
+    position: absolute;
+    span {
+      margin-left: 6em;
+    }
+  }
+  .email-signup {
+    position: absolute;
+    right: 0;
+    input {
+      // border: none;
+      width: 270px;
+      height: 28px;
+      @include placeholder {
+        color: $medium-grey;
+      }
+    }
+    button {
+      width: 100px;
+    }
+  }
+}
