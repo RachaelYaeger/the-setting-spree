@@ -472,6 +472,10 @@ section#splash {
   width: 580px;
   margin: 0 auto;
   padding: 19px;
+  img {
+    height: 90px;
+    margin-top: 1em;
+  }
 }
 
 #login-container {
