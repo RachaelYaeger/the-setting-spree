@@ -108,6 +108,16 @@ button {
   text-align: center;
 }
 
+// Styling for flash messages
+.alert {
+  text-align: center;
+  height: 36px;
+  line-height: 36px;
+  font-size: 1.2em;
+  background-color: #BFBEBD;
+  color: white;
+}
+
 // FORM ////////////////////////////////////////////////////////////////////////////////
 
 form {
@@ -148,7 +158,8 @@ form {
 
 // INQUIRY FORM ///////////////////////////////////////////
 
-#inquiry-form {
+// Matches the form id provided by rails
+#new_inquiry {
   width: 712px;
   input, .wrapper-dropdown {
     margin: 6px 12px 0;
