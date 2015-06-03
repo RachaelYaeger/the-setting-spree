@@ -13,7 +13,10 @@ $(function() {
               var opt = $(this);
               obj.val = opt.text();
               obj.index = opt.index();
+              // Changes value displayed to user in the dropdown menu
               obj.placeholder.text(obj.val);
+              // Adds value to hidden field to be submitted with form
+              $('#inquiry_customer_type').val(obj.val);
           });
       },
       getValue : function() {
