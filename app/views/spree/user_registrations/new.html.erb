@@ -1,0 +1,27 @@
+<% @body_id = 'signup' %>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default">
+    <div class="panel-heading login-heading">
+      <!-- <h3 class="panel-title"><%#= Spree.t(:create_a_new_account) %></h3> -->
+      <h3 class="active-tab">Join Now</h3>
+      <h3><%= link_to 'Sign In', spree.login_path %></h3>
+    </div>
+    <div class="login-line"></div>
+      <div id="new-customer" class="panel-body login-body" data-hook="login">
+          <%= form_for resource, :as => :spree_user, :url => spree.registration_path do |f| %>
+            <div data-hook="signup_inside_form">
+              <%= render :partial => 'spree/shared/user_form', :locals => { :f => f } %>
+              <p><%= f.submit "Log In", :class => 'btn btn-lg btn-success btn-block' %></p>
+            </div>
+          <% end %>
+          <div class="text-center login-options">
+            <a href="#">Login with Facebook</a>
+            <div class="mailer-option">
+              <input type="checkbox" name="mailer" id="mailer" checked>Yes, I want to stay in touch.
+            </div>
+          </div>
+          <div data-hook="login_extras"></div>
+      </div>
+  </div>
+</div>
