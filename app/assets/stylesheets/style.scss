@@ -175,6 +175,9 @@ form {
     border-right: 1px solid $dark-grey;
     overflow: visible;
     height: initial;
+    li:last-child {
+      border-bottom: 1px solid $dark-grey;
+    }
   }
 }
 
@@ -281,9 +284,6 @@ input[type=checkbox], input[type=radio]{
       &:hover {
         background-color: $light-grey;
       }
-    }
-    li:last-child {
-      border-bottom: 1px solid $dark-grey;
     }
   }
 }
@@ -548,12 +548,16 @@ section#splash {
   background-color: $light-grey;
 }
 
+#checkout-cart #cart-container {
+  border-bottom: 1px solid $medium-grey;
+}
+
 #checkout {
   position: relative;
   max-width: $outer-max-width;
   margin: 0 auto;
   padding-bottom: 2em;
-  border-top: 1px solid $medium-grey;
+  // border-top: 1px solid $medium-grey;
   padding-top: 3em;
 }
 
