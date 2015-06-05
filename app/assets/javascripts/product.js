@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   var showProduct = function(url){
     $('body').css('opacity', 0.5);
+    history.pushState(null, null, url);
     $.get(url, function(data){
       console.log("calls showProduct");
       // console.log(data);
@@ -9,6 +10,7 @@ $(document).ready(function() {
         .prepend($(data).find('#show-product'));
       $('#show-product').hide().fadeIn(200);
       $('body').css('opacity', 1);
+
     });
   }
 
