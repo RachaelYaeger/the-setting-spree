@@ -1,12 +1,25 @@
-// $(document).ready(function() {
+$(document).ready(function() {
 
-  var showProduct = function(){
-    $.get('products/ruby-on-rails-bag', function(data){
+  var showProduct = function(url){
+    $('body').css('opacity', 0.5);
+    $.get(url, function(data){
       console.log("calls showProduct");
       // console.log(data);
       $('#products')
-      .prepend('<h1>HELLO THERE!</h1>');
+        .prepend($(data).find('#show-product'));
+      $('#show-product').hide().fadeIn(200);
+      $('body').css('opacity', 1);
     });
   }
 
-// });
+  // $(window).load(function(){
+  //   showProduct('/products/ruby-on-rails-bag');
+  // })
+
+  $(document).on('click', '.product', function(e){
+    e.preventDefault();
+    product = $(e.currentTarget);
+    showProduct(product.find('a:first').attr('href'));
+  })
+
+});

@@ -25,6 +25,8 @@ module Spree
         return redirect_to @product, status: :moved_permanently
       end
 
+      # render layout: false
+
       # Cart logic for order. Comes from Spree OrdersController edit action
       # @order = current_order || Order.incomplete.find_or_initialize_by(guest_token: cookies.signed[:guest_token])
       # associate_user
