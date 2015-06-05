@@ -38,7 +38,11 @@
   .logo-container {
     width: 180px;
     margin: 0 auto;
-    padding-top: 4px;
+    padding-top: 4px; 
+    &.short {
+      height: 48px;
+      overflow: hidden;
+    }
   }
 
   .centered-navigation-wrapper {
