@@ -65,3 +65,5 @@ gem 'puma'
 gem 'rails_12factor', group: :production
 
 gem 'aws-sdk', '< 2.0'
+
+gem "pry-rails"

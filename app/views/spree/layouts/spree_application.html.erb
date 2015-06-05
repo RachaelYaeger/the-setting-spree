@@ -12,6 +12,7 @@
     <%= csrf_meta_tags %>
     <!-- end of copy from rails application.html.erb -->
   </head>
+
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
     <%= render partial: 'spree/shared/google_analytics.js' %>
     <%#= render partial: 'spree/shared/header' %>
@@ -24,9 +25,32 @@
 
         <div id="content" class="<%= !content_for?(:sidebar) ? "col-sm-12" : "col-sm-8 col-md-9" %>" data-hook>
           <%= flash_messages %>
+
+          <!-- Render shopping cart on all pages -->
+          <% if params[:action] == "index" || params[:action] == "show" %>
+            <div id="cart">
+              <div id="cart-container">
+                <%= render 'spree/home/custom_cart' %>
+                <form action="/checkout">
+                  <button type="submit">Check Out | $59</button>
+                </form>
+              </div>
+            </div>
+          <% else %>
+          <div id="checkout-cart">
+            <div id="cart-container">
+              <%= render 'spree/home/custom_cart' %>
+                <% if @order.state != 'confirm' %>
+                <div id="checkout-summary" data-hook="checkout_summary_box" class="col-md-3">
+                  <%= render partial: 'spree/checkout/summary', locals: { order: @order } %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <% end %>
+
           <%= yield %>
         </div>
-
         <%= yield :templates %>
       <!-- </div>
     </div> -->

@@ -4,8 +4,13 @@
     <a href="javascript:void(0)" id="js-centered-navigation-menu-btn" class="centered-navigation-menu-btn header-link">Menu</a>
     <nav role="navigation">
       <ul id="js-centered-navigation-menu" class="centered-navigation-menu">
+      <% if params[:action] == "index" %>
         <li class="nav-link"><a href="#products-section">Shop</a></li>
         <li class="nav-link"><a href="#studio">Studio</a></li>
+      <% else %>
+        <li class="nav-link"><a href="/#products-section">Shop</a></li>
+        <li class="nav-link"><a href="/#studio">Studio</a></li>
+      <% end %>
       </ul>
     </nav>
     <a id="cart-link" class="header-link" href="#">Cart</a>
