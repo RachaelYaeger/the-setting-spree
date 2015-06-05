@@ -1,4 +1,4 @@
-<%# @body_id = 'login' %>
+<% @body_id = 'checkout-body' %>
 <div id="login">
   <div class="col-md-6 <%= request.path == spree.login_path ? "col-md-offset-3" : "" %>">
     <div class="panel panel-default">
@@ -22,3 +22,4 @@
     </div>
   </div>
 </div>
+<%= render 'spree/home/checkout_footer' %>
