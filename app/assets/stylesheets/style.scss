@@ -544,8 +544,13 @@ section#splash {
 
 // CHECKOUT ////////////////////////////////////////////////////////////////////////////////////
 
-#checkout-body, #checkout-cart {
+#checkout-cart {
   background-color: $light-grey;
+}
+
+#checkout-body {
+  height: 100vh;
+ background-color: $light-grey; 
 }
 
 #checkout-cart #cart-container {
@@ -568,14 +573,21 @@ section#splash {
   padding: 46px 0;
 }
 
+footer#checkout-footer {
+  position: fixed;
+  height: 50px;
+  bottom: 0;
+  background: white;
+}
+
 // LOGIN ////////////////////////////////////////////////////////////////////////////////////
 
 #login, #signup, #registration {
   padding-top: 3em;
   text-align: center;
-  background-color: $light-grey;
+  // background-color: $light-grey;
   // padding-bottom: 2em;
-  height: 100vh;
+  // height: 100vh;
   hr {
     display: none;
   }

@@ -1,3 +1,4 @@
+<% @body_id = 'checkout-body' %>
 <% content_for :google_analytics do %>
   <%= render partial: 'spree/shared/google_checkout.js', locals: { order: @order, step_number: (@order.checkout_steps.index(@order.state) + 1) } %>
 <% end %>
@@ -19,7 +20,7 @@
 </section> -->
 
 
-<div id="checkout-body">
+<div>
   <!-- <div id="checkout-container"> -->
     <div id="checkout" data-hook>
       <%= render partial: 'spree/shared/error_messages', locals: { target: @order } %>

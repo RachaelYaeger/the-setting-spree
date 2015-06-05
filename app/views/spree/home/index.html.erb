@@ -60,7 +60,7 @@
   <section id="inquiry">
     <div class="form-container insert">
       <h2>Make an Inquiry</h2>
-      <%= form_for @inquiry, url: "/inquiries" do |f| %>
+      <%= form_for Inquiry.new, url: "/inquiries" do |f| %>
       <%= f.text_field :name, placeholder: "Name", tabindex: "1" %>
       <%= f.text_field :email, placeholder: "Email", tabindex: "2" %>
       <%= f.text_field :datetime, placeholder: "Date + Time", tabindex: "3" %>
@@ -83,7 +83,7 @@
   <section id="insta-feed">
     <h2>@thesettingnyc</h2>
     <div id="insta-images-container">
-      <% @images.each do |image| %>
+      <% Instagram.images.each do |image| %>
         <%= image_tag image, class: 'insta-img' %>
       <% end %>
     </div>
