@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_action :init_order
   def init_order
-    @order = current_order
+    @order = current_order rescue nil
   end
 
   def create_inquiry

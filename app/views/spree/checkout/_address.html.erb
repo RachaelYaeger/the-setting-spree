@@ -3,7 +3,8 @@
     <div class="panel panel-default" id="billing" data-hook>
       <%= form.fields_for :bill_address do |bill_form| %>
         <div class="panel-heading">
-          <h3 class="panel-title"><%= Spree.t(:billing_address) %></h3>
+          <!-- <h3 class="panel-title"><%#= Spree.t(:billing_address) %></h3> -->
+          <h2 class="panel-title"><%= Spree.t(:billing_address) %></h2>
         </div>
         <div class="panel-body">
           <%= render :partial => 'spree/address/form', :locals => { :form => bill_form, :address_type => 'billing', :address => @order.bill_address } %>
