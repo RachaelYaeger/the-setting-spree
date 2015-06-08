@@ -27,7 +27,7 @@
           <%= flash_messages %>
 
           <!-- Render shopping cart on all pages -->
-          <% if params[:action] == "index" || params[:action] == "show" %>
+          <% if params[:action] == "index" || params[:action] == "show" && params[:controller] == "spree/products" %>
             <div id="cart">
               <div id="cart-container">
                 <%= render 'spree/home/custom_cart' %>

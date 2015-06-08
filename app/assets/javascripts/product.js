@@ -1,12 +1,28 @@
-// $(document).ready(function() {
+$(document).ready(function() {
 
-  var showProduct = function(){
-    $.get('products/ruby-on-rails-bag', function(data){
+  var showProduct = function(url){
+    $('#show-product').remove();
+    $('body').css('opacity', 0.5);
+    history.pushState(null, null, url);
+    $.get(url, function(data){
       console.log("calls showProduct");
-      // console.log(data);
       $('#products')
-      .prepend('<h1>HELLO THERE!</h1>');
+        .prepend($(data).find('#show-product'));
+      $('#show-product').hide().fadeIn(200).append('<div class="close-product">x</div>');
+      $('body').css('opacity', 1);
     });
   }
 
-// });
+  $(document).on('click', '.product', function(e){
+    e.preventDefault();
+    product = $(e.currentTarget);
+    showProduct(product.find('a:first').attr('href'));
+  })
+
+  $(document).on('click', '.close-product', function(e){
+    $('#show-product').fadeOut(200, function(){
+      $('#show-product').remove();
+    });
+  })
+
+});

@@ -1,7 +1,7 @@
 $(document).ready(function() {
-  var cartToggle = $('#cart-link').unbind();
+  // var cartToggle = $('#cart-link').unbind();
 
-  cartToggle.on('click', function(e) {
+  $(document).on('click', '#cart-link', function(e) {
     e.preventDefault();
     if ($('#cart').is(':visible')) {
       $('#cart, #space-holder').slideUp();

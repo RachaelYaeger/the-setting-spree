@@ -1,13 +1,22 @@
-<p>You have these products in your cart:</p>
+<% if @order.nil? || @order.line_items.empty? %>
+  <h2 class="cart-headline">Your Cart</h2>
+  <p>There are no items in your cart.</p>
+<% elsif params[:controller] != "spree/orders" && params[:action] != "show" %>
+  <h2 class="cart-headline">Your Cart</h2>
+  <p>You have these products in your cart:</p>
+<% else %>
+  <h2 class="cart-headline">Your Order</h2>
+<% end %>
 <!-- Add Order Edit content here -->
-<div id="cart-item-container" data-hook="cart_container">
   <!-- <h1><%#= Spree.t(:shopping_cart) %></h1> -->
-  <% if @order.line_items.empty? %>
+  <%# if @order.nil? || @order.line_items.empty? %>
 <!--         <div data-hook="empty_cart">
       <div class="alert alert-info"><%#= Spree.t(:your_cart_is_empty) %></div>
       <p><%#= link_to Spree.t(:continue_shopping), products_path, class: 'btn btn-default' %></p>
     </div> -->
-  <% else %>
+  <%# else %>
+<div id="cart-item-container" data-hook="cart_container">
+  <% if @order.present? %>
     <div data-hook="outside_cart_form">
       <%= form_for @order, url: update_cart_path, html: { id: 'update-cart' } do |order_form| %>
         <div data-hook="inside_cart_form">

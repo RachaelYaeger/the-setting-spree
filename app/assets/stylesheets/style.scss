@@ -38,6 +38,7 @@ body {
   max-width: $inner-max-width;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
 }
 
 section {
@@ -431,6 +432,13 @@ section#splash {
   background-color: $light-grey;
 }
 
+.cart-headline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 0.6em;
+}
+
 #cart {
   display: none;
   position: fixed;
@@ -533,7 +541,7 @@ section#splash {
   }
   .list-group {
     text-align: center;
-    margin: 2em 0;
+    margin: 1em 0;
   }
 }
 
@@ -544,8 +552,17 @@ section#splash {
 
 // CHECKOUT ////////////////////////////////////////////////////////////////////////////////////
 
-#checkout-body, #checkout-cart {
+#checkout-cart {
   background-color: $light-grey;
+  padding: 0 20px;
+}
+
+#checkout-body {
+  height: 100vh;
+  background-color: $light-grey;
+  input[type=submit] {
+    margin: 12px;
+  }
 }
 
 #checkout-cart #cart-container {
@@ -568,14 +585,33 @@ section#splash {
   padding: 46px 0;
 }
 
+footer#checkout-footer {
+  position: fixed;
+  height: 60px;
+  bottom: 0;
+  background: white;
+  text-align: center;
+  padding-top: 12px;
+}
+
+#order_summary {
+  text-align: center;
+  h5 {
+    margin: 0 0 0.5em;
+  }
+  p {
+    margin: 0.5em 0 2em;
+  }
+}
+
 // LOGIN ////////////////////////////////////////////////////////////////////////////////////
 
 #login, #signup, #registration {
   padding-top: 3em;
   text-align: center;
-  background-color: $light-grey;
+  // background-color: $light-grey;
   // padding-bottom: 2em;
-  height: 100vh;
+  // height: 100vh;
   hr {
     display: none;
   }
