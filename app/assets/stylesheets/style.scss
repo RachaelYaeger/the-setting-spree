@@ -7,7 +7,7 @@ $medium-grey: #BFBEBD;
 
 $show-product-height: 280px;
 $outer-max-width: 68em;
-$inner-max-width: 58em;
+$inner-max-width: 61em;
 
 
 // GENERAL ///////////////////////////////////////////////////////////////////////////
@@ -38,7 +38,7 @@ body {
   max-width: $inner-max-width;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 20px;
+  padding: 0 1.5em;
 }
 
 section {
@@ -109,6 +109,8 @@ button {
   text-align: center;
 }
 
+
+
 // Styling for flash messages
 .alert {
   text-align: center;
@@ -124,6 +126,7 @@ button {
 form {
   margin: 0 auto;
   width: $inner-max-width;
+  padding: 0 1.5em;
   input[type=submit]{
     color: white;
     background-color: $medium-grey;
@@ -159,9 +162,14 @@ form {
 
 // INQUIRY FORM ///////////////////////////////////////////
 
+
+#inquiry {
+  position: relative;
+}
+
 // Matches the form id provided by rails
 #new_inquiry {
-  width: 712px;
+  width: 760px;
   input, .wrapper-dropdown {
     margin: 6px 12px 0;
     width: 330px;
@@ -330,6 +338,12 @@ section#splash {
 
 // PRODUCTS ///////////////////////////////////////////////////////////////////////////
 
+#products #show-product {
+  padding-top: 1em;
+  height: 500px;
+  position: relative;
+}
+
 #products-title {
   margin-bottom: 0.2em;
 }
@@ -363,7 +377,7 @@ section#splash {
 
 // SHOW PRODUCT ///////////////////////////////////////////////////////////////////////
 
-#show-product {
+#product-details #show-product {
   padding-top: 120px;
   height: 100vh;
   margin-bottom: -120px;
@@ -389,6 +403,24 @@ section#splash {
 #cart-form > form {
   margin: 0;
   width: initial;
+  padding: 0;
+}
+
+.x-icon {
+  position: absolute;
+  font-size: 2em;
+  color: $medium-grey;
+  cursor: pointer;
+}
+
+.close-product {
+  top: 50px;
+  right: 44px;
+}
+
+.close-inquiry {
+  top: 6px;
+  right: 22px;
 }
 
 
@@ -573,9 +605,8 @@ section#splash {
   position: relative;
   max-width: $outer-max-width;
   margin: 0 auto;
-  padding-bottom: 2em;
-  // border-top: 1px solid $medium-grey;
-  padding-top: 3em;
+  padding-top: 1em;
+  padding-bottom: 5em;
 }
 
 #checkout-summary {

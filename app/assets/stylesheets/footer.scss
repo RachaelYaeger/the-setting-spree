@@ -15,22 +15,29 @@ footer {
     margin: 0;
     position: absolute;
     span {
-      margin-left: 6em;
+      margin-left: 4em;
     }
   }
   .email-signup {
     position: absolute;
     right: 0;
     input {
-      // border: none;
+      background-color: transparent;
+      border-bottom: 1px solid $dark-grey;
       width: 270px;
       height: 28px;
-      @include placeholder {
-        color: $medium-grey;
-      }
+      margin: 0;
+      // @include placeholder {
+      //   color: $medium-grey;
+      // }
     }
     button {
-      width: 100px;
+      width: 70px;
+      background-color: transparent;
+      color: $dark-grey;
+      vertical-align: sub;
+      font-style: italic;
+      font-size: inherit;
     }
   }
 }

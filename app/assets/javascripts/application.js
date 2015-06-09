@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+// Function to adjust where the page scrolls to when an hash anchor is clicked.
+$(window).on("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 60);
+});

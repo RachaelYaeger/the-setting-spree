@@ -8,7 +8,7 @@ $(document).ready(function() {
       console.log("calls showProduct");
       $('#products')
         .prepend($(data).find('#show-product'));
-      $('#show-product').hide().fadeIn(200).append('<div class="close-product">x</div>');
+      $('#show-product').hide().fadeIn(200).append('<div class="x-icon close-product">×</div>'); //"x" is unicode symbol
       $('body').css('opacity', 1);
     });
   }
