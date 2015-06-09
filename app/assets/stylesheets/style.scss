@@ -109,6 +109,8 @@ button {
   text-align: center;
 }
 
+
+
 // Styling for flash messages
 .alert {
   text-align: center;
@@ -159,6 +161,11 @@ form {
 }
 
 // INQUIRY FORM ///////////////////////////////////////////
+
+
+#inquiry {
+  position: relative;
+}
 
 // Matches the form id provided by rails
 #new_inquiry {
@@ -331,6 +338,12 @@ section#splash {
 
 // PRODUCTS ///////////////////////////////////////////////////////////////////////////
 
+#products #show-product {
+  padding-top: 1em;
+  height: 500px;
+  position: relative;
+}
+
 #products-title {
   margin-bottom: 0.2em;
 }
@@ -364,7 +377,7 @@ section#splash {
 
 // SHOW PRODUCT ///////////////////////////////////////////////////////////////////////
 
-#show-product {
+#product-details #show-product {
   padding-top: 120px;
   height: 100vh;
   margin-bottom: -120px;
@@ -390,6 +403,23 @@ section#splash {
 #cart-form > form {
   margin: 0;
   width: initial;
+}
+
+.x-icon {
+  position: absolute;
+  font-size: 2em;
+  color: $medium-grey;
+  cursor: pointer;
+}
+
+.close-product {
+  top: 50px;
+  right: 44px;
+}
+
+.close-inquiry {
+  top: 6px;
+  right: 22px;
 }
 
 

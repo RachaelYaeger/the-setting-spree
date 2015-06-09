@@ -53,11 +53,12 @@
     </div>
     <p class="subtext">Our studio includes a test kitchen bustling with freshly baked goods and special fare for our private events, appointments, and spontaneous gatherings.</p>
     <div class="expand centered">
-      <em><a href="javascript:void(0)">Make an inquiry</a></em>
+      <em><a href="javascript:void()" onclick="showInquiry()">Make an inquiry</a></em>
     </div>
   </section>
 
-  <section id="inquiry">
+  <section id="inquiry" class="hidden">
+    <div class="close-inquiry x-icon">×</div>
     <div class="form-container insert">
       <h2>Make an Inquiry</h2>
       <%= form_for Inquiry.new, url: "/inquiries" do |f| %>
