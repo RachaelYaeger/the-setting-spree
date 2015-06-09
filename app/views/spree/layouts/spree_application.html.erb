@@ -31,9 +31,11 @@
             <div id="cart">
               <div id="cart-container">
                 <%= render 'spree/home/custom_cart' %>
+                <% if @order.present? %>
                 <form action="/checkout">
-                  <button type="submit">Check Out | $59</button>
+                  <button type="submit">Check Out | <%= number_to_currency(@order.item_total) %></button>
                 </form>
+                <% end %>
               </div>
             </div>
           <% else %>
