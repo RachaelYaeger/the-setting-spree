@@ -162,7 +162,7 @@ form {
 
 // Matches the form id provided by rails
 #new_inquiry {
-  width: 712px;
+  width: 760px;
   input, .wrapper-dropdown {
     margin: 6px 12px 0;
     width: 330px;
@@ -574,9 +574,8 @@ section#splash {
   position: relative;
   max-width: $outer-max-width;
   margin: 0 auto;
-  padding-bottom: 2em;
-  // border-top: 1px solid $medium-grey;
-  padding-top: 3em;
+  padding-top: 1em;
+  padding-bottom: 5em;
 }
 
 #checkout-summary {
