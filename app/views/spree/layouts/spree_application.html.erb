@@ -38,11 +38,11 @@
                 <% end %>
               </div>
             </div>
-          <% else %>
+          <% elsif params %>
           <div id="checkout-cart">
             <div id="cart-container">
               <%= render 'spree/home/custom_cart' %>
-                <% if @order.state != 'confirm' %>
+                <% if @order.present? && @order.state != 'confirm' %>
                 <div id="checkout-summary" data-hook="checkout_summary_box" class="col-md-3">
                   <%= render partial: 'spree/checkout/summary', locals: { order: @order } %>
                 </div>
