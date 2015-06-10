@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  // var cartToggle = $('#cart-link').unbind();
 
+  // Hides and shows cart section with a sliding animation
   $(document).on('click', '#cart-link', function(e) {
     e.preventDefault();
     if ($('#cart').is(':visible')) {
@@ -11,8 +11,8 @@ $(document).ready(function() {
     }
   });
 
+  // Hides and shows the remove link for the cart items
   $(".line-item").hover(function(){
-    console.log("pon de line");
     var deleteDiv = $("span");
     $(this).find(deleteDiv).toggleClass("hidden");
   })
