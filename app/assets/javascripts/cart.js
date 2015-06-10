@@ -10,4 +10,10 @@ $(document).ready(function() {
       $('#cart, #space-holder').slideDown();
     }
   });
+
+  $(".line-item").hover(function(){
+    console.log("pon de line");
+    var deleteDiv = $("span");
+    $(this).find(deleteDiv).toggleClass("hidden");
+  })
 })

@@ -350,9 +350,9 @@ section#splash {
 
 .product {
   display: inline-block;
-  width: 199px;
-  height: 133px;
-  margin: 0 15px 30px;
+  width: 266px;
+  height: 177px;
+  margin: 0 20px 30px;
   cursor: pointer;
   &:hover img {
     opacity: 0;
@@ -360,8 +360,8 @@ section#splash {
   img {
     opacity: 1;
     @include transition(opacity 0.5s ease-out);
-    width: 199px;
-    height: 133px;
+    width: 266px;
+    height: 177px;
     position: absolute;
   }
   .product-text {
@@ -518,6 +518,12 @@ section#splash {
     height: 90px;
     margin-top: 1em;
   }
+}
+
+.cart-item-delete {
+  height: 0;
+  width: 90px;
+  text-align: center;
 }
 
 #login-container {

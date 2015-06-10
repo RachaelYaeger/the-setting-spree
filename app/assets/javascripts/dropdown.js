@@ -12,11 +12,19 @@ $(function() {
       obj.opts.on('click',function(){
               var opt = $(this);
               obj.val = opt.text();
+              obj.country = opt.data("country");
               obj.index = opt.index();
               // Changes value displayed to user in the dropdown menu
               obj.placeholder.text(obj.val);
+
               // Adds value to hidden field to be submitted with form
-              $('#inquiry_customer_type').val(obj.val);
+              // Checks if it is the hidden field for the inquiry form or the address form
+              if ( $('#inquiry_customer_type').length) {
+                $('#inquiry_customer_type').val(obj.val);
+              }
+              else if ( $('#order_bill_address_attributes_country_id').length) { 
+                $('#order_bill_address_attributes_country_id').val(obj.country);
+              }
           });
       },
       getValue : function() {
