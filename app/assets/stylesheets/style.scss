@@ -476,7 +476,7 @@ section#splash {
   position: fixed;
   z-index: 9999999999;
   background-color: $light-grey;
-  // height: 160px;
+  height: 160px;
   width: 100%;
   top: 0;
   margin: 0;
@@ -564,25 +564,25 @@ section#splash {
 
 // PAYMENT ////////////////////////////////////////////////////////////////////////////////////
 
-#payment {
-  #payment-method-fields {
-    // text-align: center;
-    label {
-      margin-left: 0;
-      margin-right: 0.5em;
-    }
-  }
-  li {
-    display: inline;
-  }
-  h4 {
-    text-align: center;
-  }
-  .list-group {
-    text-align: center;
-    margin: 1em 0;
-  }
-}
+// #payment {
+//   #payment-method-fields {
+//     // text-align: center;
+//     label {
+//       margin-left: 0;
+//       margin-right: 0.5em;
+//     }
+//   }
+//   li {
+//     display: inline;
+//   }
+//   h4 {
+//     text-align: center;
+//   }
+//   .list-group {
+//     text-align: center;
+//     margin: 1em 0;
+//   }
+// }
 
 .cart-item-image, .line-item {
   display: inline-block;
@@ -615,6 +615,14 @@ section#splash {
   margin: 0 auto;
   padding-top: 1em;
   padding-bottom: 5em;
+  input {
+    text-align: left;
+    padding-left: 1em;
+    font-size: 1em;
+  }
+  input[type=submit]{
+    text-align: center;
+  }
 }
 
 #checkout-summary {
@@ -641,6 +649,15 @@ footer#checkout-footer {
   p {
     margin: 0.5em 0 2em;
   }
+}
+
+.shipping-method {
+  display: inline;
+}
+
+.shipping-methods {
+  text-align: center;
+  margin: 3em 0;
 }
 
 // LOGIN ////////////////////////////////////////////////////////////////////////////////////
