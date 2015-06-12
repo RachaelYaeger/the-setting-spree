@@ -9,7 +9,7 @@
       <div class="card_options">
         <%= radio_button_tag 'use_existing_card', 'yes', true %>
         <label for="use_existing_card_yes">Use an existing card on file</label>
-        <br/>
+        <br>
         <%= radio_button_tag 'use_existing_card', 'no' %>
         <label for="use_existing_card_no">Use a new card / payment method</label>
       </div>
@@ -57,22 +57,21 @@
     </ul>
 
     <!-- shipping choices -->
-    <%= form.fields_for :shipments do |ship_form| %>
-<!--       <h4 class="stock-shipping-method-title"><%#= Spree.t(:shipping_method) %></h4> -->
+<!--     <%#= form.fields_for :shipments do |ship_form| %>
       <ul class="list-group shipping-methods">
         <li>Shipping Method</li>
-        <% ship_form.object.shipping_rates.each do |rate| %>
+        <%# ship_form.object.shipping_rates.each do |rate| %>
           <li class="list-group-item shipping-method">
             <label>
-              <%= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
-              <span class="rate-name"><%= rate.name %></span>
-              <span class="badge rate-cost"><%= rate.display_cost %></span>
+              <%#= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
+              <span class="rate-name"><%#= rate.name %></span>
+              <span class="badge rate-cost"><%#= rate.display_cost %></span>
             </label>
           </li>
-        <% end %>
+        <%# end %>
       </ul>
     </div>
-    <% end %>
+    <%# end %> -->
 
     <!-- <p class='field' data-hook='coupon_code'>
       <%#= form.label :coupon_code %><br />
