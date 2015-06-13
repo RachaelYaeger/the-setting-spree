@@ -351,7 +351,7 @@ section#splash {
 .product {
   display: inline-block;
   width: 266px;
-  height: 177px;
+  height: 266px;
   margin: 0 20px 30px;
   cursor: pointer;
   &:hover img {
@@ -361,13 +361,13 @@ section#splash {
     opacity: 1;
     @include transition(opacity 0.5s ease-out);
     width: 266px;
-    height: 177px;
+    height: 266px;
     position: absolute;
   }
   .product-text {
     // text-align: center;
     font-size: 0.75em;
-    margin-top: 3.5em;
+    margin-top: 8.5em;
     p {
       margin: 0;
     }

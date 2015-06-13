@@ -22,21 +22,6 @@
   <section id="products-section">
     <h2 id="products-title">Tabletop</h2>
     <h5>Handmade in NYC</h5>
-<!--     <div id="show-product">
-      <div class="show-product-container insert">
-        <div class="x"></div>
-        <img class="show-product-image" src="/img/product-image-ph-4.jpg" alt="product-image">
-        <div class="show-product-text">
-          <h3>Custom Tea Cup</h3>
-          <h4>$55</h4>
-          <p>Approximately 3.5” x 3.5”.</p>
-          <p>Handmade in New York City.<br>
-          Hand wash recommended.<br>
-          Made to order within 6 weeks.</p>
-          <button>Add to cart</button>
-        </div>
-      </div>
-    </div> -->
     <div data-hook="homepage_products">
       <% cache(cache_key_for_products) do %>
         <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
