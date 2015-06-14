@@ -6,8 +6,9 @@ $(document).ready(function() {
     history.pushState(null, null, url);
     $.get(url, function(data){
       console.log("calls showProduct");
-      $('#products')
-        .prepend($(data).find('#show-product'));
+      $('#products-section')
+      .prepend($(data).find('#show-product'));
+      location.href = "#show-product";
       $('#show-product').hide().fadeIn(200).append('<div class="x-icon close-product">×</div>'); //"x" is unicode symbol
       $('body').css('opacity', 1);
     });
