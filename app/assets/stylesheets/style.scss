@@ -6,6 +6,7 @@ $light-grey: #F4F4F4;
 $medium-grey: #BFBEBD;
 
 $show-product-height: 280px;
+$product-thumb-size: 266px;
 $outer-max-width: 68em;
 $inner-max-width: 61em;
 
@@ -107,6 +108,10 @@ button {
 
 .centered {
   text-align: center;
+}
+
+.mobile-only {
+  display: none;
 }
 
 
@@ -320,11 +325,14 @@ input[type=checkbox], input[type=radio]{
 section#splash {
   height: 100vh;
   position: relative;
-  p {
+  .splash-text {
     padding-top: 36vh;
     margin: 0 auto;
     max-width: ($inner-max-width - 10em);
   }
+  // p {
+
+  // }
   .expand {
     position: absolute;
     left: 50%;
@@ -350,8 +358,8 @@ section#splash {
 
 .product {
   display: inline-block;
-  width: 266px;
-  height: 266px;
+  width: $product-thumb-size;
+  height: $product-thumb-size;
   margin: 0 20px 30px;
   cursor: pointer;
   &:hover img {
@@ -360,8 +368,8 @@ section#splash {
   img {
     opacity: 1;
     @include transition(opacity 0.5s ease-out);
-    width: 266px;
-    height: 266px;
+    width: $product-thumb-size;
+    height: $product-thumb-size;
     position: absolute;
   }
   .product-text {
@@ -767,6 +775,55 @@ fieldset {
     font-style: italic;
     input {
       margin: 0 1em 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 665px){
+  $product-thumb-size: 133px;
+
+  html {
+    line-height: 1.4em;
+  }
+  .mobile-only {
+    display: initial;
+  }
+  #splash-background {
+    height: 60vh;
+  }
+
+  #splash .expand {
+    display: none;
+  }
+  section#splash .splash-text {
+    padding-top: 68vh;
+  }
+
+  #products {
+    width: 87vw;
+    margin: 0 auto;
+  }
+  
+  .product {
+    width: 33vw;
+    height: 33vw;
+    margin: 0 5vw 15vw;
+    cursor: pointer;
+    &:hover img {
+      opacity: 1;
+    }
+    img {
+      opacity: 1;
+      width: 33vw;
+      height: 33vw;
+    }
+    .product-text {
+      white-space: nowrap;
+      line-height: 1.2em;
+      margin-top: 31vw;
+      // p {
+      //   margin: 0;
+      // }
     }
   }
 }
