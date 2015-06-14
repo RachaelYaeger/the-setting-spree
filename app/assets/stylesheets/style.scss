@@ -805,8 +805,8 @@ fieldset {
   }
 
   .product {
-    width: 39.5vw;
-    height: 41.5vw;
+    width: 39vw;
+    height: 42vw;
     margin: 0 2vw 15vw;
     cursor: pointer;
     &:hover img {
@@ -814,8 +814,8 @@ fieldset {
     }
     img {
       opacity: 1;
-      width: 39.5vw;
-      height: 39.5vw;
+      width: 39vw;
+      height: 39vw;
     }
     .product-text {
       white-space: nowrap;
@@ -832,8 +832,8 @@ fieldset {
   }
 
   .show-product-image {
-    height: 60vh;
-    width: 60vh;
+    height: 100vw;
+    width: 100vw;
     float: none;
     margin: 0;
   }
@@ -872,7 +872,7 @@ fieldset {
   }
 
   .insta-img {
-    width: 39.5vw;
+    width: 39vw;
     margin: 2vw;
   }
 
