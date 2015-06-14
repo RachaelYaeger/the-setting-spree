@@ -800,31 +800,85 @@ fieldset {
   }
 
   #products {
-    width: 87vw;
+    width: 100%;
     margin: 0 auto;
   }
-  
+
   .product {
-    width: 33vw;
-    height: 33vw;
-    margin: 0 5vw 15vw;
+    width: 39.5vw;
+    height: 41.5vw;
+    margin: 0 2vw 15vw;
     cursor: pointer;
     &:hover img {
       opacity: 1;
     }
     img {
       opacity: 1;
-      width: 33vw;
-      height: 33vw;
+      width: 39.5vw;
+      height: 39.5vw;
     }
     .product-text {
       white-space: nowrap;
       line-height: 1.2em;
-      margin-top: 31vw;
+      margin-top: 37vw;
       // p {
       //   margin: 0;
       // }
     }
   }
+
+  #products-section #show-product {
+    padding: 0;
+  }
+
+  .show-product-image {
+    height: 60vh;
+    width: 60vh;
+    float: none;
+    margin: 0;
+  }
+
+  .show-product-text {
+    margin: 0;
+    text-align: center;
+    button {
+      position: initial;
+      display: initial;
+    }
+  }
+
+  #main-image {
+    margin: 0 -1.5em;
+  }
+
+  .insert {
+    border-top: none;
+    border-bottom: none;
+    padding: none;
+    margin: 26px 0;
+  }
+
+  .x-icon {
+    display: none;
+  }
+
+  .slider {
+    margin: 0 -1.5em;
+    width: 100vw;
+  }
+
+  section {
+    min-height: 100vh;
+  }
+
+  .insta-img {
+    width: 39.5vw;
+    margin: 2vw;
+  }
+
+  #insta-images-container {
+    width: 100%;
+  }
+
 }
 
