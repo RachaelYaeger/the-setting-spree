@@ -821,9 +821,6 @@ fieldset {
       white-space: nowrap;
       line-height: 1.2em;
       margin-top: 37vw;
-      // p {
-      //   margin: 0;
-      // }
     }
   }
 
@@ -880,6 +877,26 @@ fieldset {
     width: 87vw;
     margin: 0 auto;
   }
+
+  #new_inquiry {
+    width: 90%;
+    input, .wrapper-dropdown {
+      display: block;
+      margin: 12px auto;
+      width: 90%;
+    }
+    input[type=submit]{
+      display: block;
+    }
+  }
+
+  form textarea {
+    display: block;
+    float: none;
+    margin: 12px auto;
+    width: 90%;
+  }
+
 
 }
 
