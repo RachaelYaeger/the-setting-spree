@@ -1,11 +1,12 @@
+  <h2 class="mobile-only">Cart</h2>
 <% if @order.nil? || @order.line_items.empty? %>
-  <h2 class="cart-headline">Your Cart</h2>
-  <p>There are no items in your cart.</p>
+  <h2 class="cart-headline desktop">Your Cart</h2>
+  <p class="desktop">There are no items in your cart.</p>
 <% elsif params[:controller] != "spree/orders" && params[:action] != "show" %>
-  <h2 class="cart-headline">Your Cart</h2>
-  <p>You have these products in your cart:</p>
+  <h2 class="cart-headline desktop">Your Cart</h2>
+  <p class="desktop">You have these products in your cart:</p>
 <% else %>
-  <h2 class="cart-headline">Your Order</h2>
+  <h2 class="cart-headline desktop">Your Order</h2>
 <% end %>
 <!-- Add Order Edit content here -->
   <!-- <h1><%#= Spree.t(:shopping_cart) %></h1> -->
