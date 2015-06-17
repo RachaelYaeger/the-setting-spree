@@ -29,8 +29,8 @@
 
           <!-- Render shopping cart on all pages -->
           <% if params[:action] == "index" || params[:action] == "show" && params[:controller] == "spree/products" %>
-            <div id="cart">
-              <div id="cart-container">
+            <div id="cart" class="desktop">
+              <div id="cart-container" class="desktop">
                 <%= render 'spree/home/custom_cart' %>
                 <% if @order.present? %>
                 <form action="/checkout">
@@ -41,7 +41,7 @@
             </div>
           <% elsif params %>
           <div id="checkout-cart">
-            <div id="cart-container">
+            <div id="cart-container" class="desktop">
               <%= render 'spree/home/custom_cart' %>
                 <% if @order.present? && @order.state != 'confirm' %>
                 <div id="checkout-summary" data-hook="checkout_summary_box" class="col-md-3">
