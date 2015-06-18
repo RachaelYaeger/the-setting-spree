@@ -23,8 +23,8 @@
   </section>
   
   <section id="products-section">
-    <h2 id="products-title">Tabletop</h2>
-    <h5>Handmade in NYC</h5>
+    <h2 id="products-title">Tides Collection</h2>
+    <h5>Inspired by the Moon &amp; Sea</h5>
     <div data-hook="homepage_products">
       <% cache(cache_key_for_products) do %>
         <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
@@ -33,7 +33,6 @@
   </section>
 
   <section id="studio">
-    <img src="" alt="">
     <h2>Studio</h2>
     <div class="slider">
       <img src="img/studio-slide-1.jpg" alt="">
@@ -67,6 +66,17 @@
       <%= f.submit %>
       <% end %>
     </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/IMG_0863_about.jpg" alt="about-image">
+    <div class="expand centered">
+      <em>The Setting is the backdrop and the foundation of every experience</em>
+    </div>
+    <p class="subtext">The Setting is a curated destination to explore &amp; purchase accents for the spaces in which we live, work, eat and entertain.</p>
+    <p class="subtext">Located in Soho, New York, The Setting’s studio hosts intimate gatherings to celebrate unique experiences alongside our one of a kind products.</p>
+
   </section>
 
   <section id="insta-feed">

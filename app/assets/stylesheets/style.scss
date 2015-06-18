@@ -28,7 +28,7 @@ body {
 
 #splash-background {
   position: absolute;
-  background-image: url("/img/hero.jpg");
+  background-image: url("https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/IMG_1029_landing.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -445,11 +445,37 @@ section#splash {
   margin: 3em auto;
 }
 
+// ABOUT /////////////////////////////////////////////////////////////////////////////////
 
-// INSTA FEED ////////////////////////////////////////////////////////////////////////////////
+#about {
+  img {
+    width: 100%;
+  }
+  div.expand {
+    margin: 2em 0;
+  }
+  p:first-of-type {
+    float: left;
+    width: 50%;
+    padding: 0 2em 0 6em;
+    margin-bottom: 8em;
+  }
+  p:last-of-type {
+    float: right;
+    width: 50%;
+    padding: 0 6em 0 2em;
+    margin-bottom: 2em;
+  }
+}
+
+
+// INSTA FEED ////////////////////////////////////////////////////////////////////////////
 
 #insta-feed {
   padding-bottom: 120px;
+  h2 {
+    clear: both;
+  }
 }
 
 #insta-images-container {
@@ -964,6 +990,27 @@ fieldset {
     }
     .cart-item-cost {
       display: block;
+    }
+  }
+
+
+  #about {
+    text-align: center;
+    img {
+      margin: 0 -1.5em;
+      width: 100vw;
+    }
+    p:first-of-type {
+      width: 100%;
+      float: none;
+      padding: 0;
+      margin: 0 auto 1em;
+    }
+    p:last-of-type {
+      width: 100%;
+      float: none;
+      padding: 0;
+      margin: 0 auto;
     }
   }
 
