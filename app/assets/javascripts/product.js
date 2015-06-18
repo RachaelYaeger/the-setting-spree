@@ -8,6 +8,11 @@ $(document).ready(function() {
       console.log("calls showProduct");
       $('#products-section')
       .prepend($(data).find('#show-product'));
+      // Applies carousel to product images
+      $('.slickness-products').slick({
+        arrows: false,
+        dots: true
+      });
       location.href = "#show-product";
       $('#show-product').hide().fadeIn(200).append('<div class="x-icon close-product">×</div>'); //"x" is unicode symbol
       $('body').css('opacity', 1);
