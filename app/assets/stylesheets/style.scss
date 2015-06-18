@@ -28,7 +28,7 @@ body {
 
 #splash-background {
   position: absolute;
-  background-image: url("https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/IMG_1029_landing.JPG");
+  background-image: url("https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/landing_1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -434,7 +434,7 @@ section#splash {
 
 // STUDIO ////////////////////////////////////////////////////////////////////////////////
 
-.slider {
+.slickness {
   width: 100%;
   img {
     width: 100%;
@@ -442,7 +442,7 @@ section#splash {
 }
 
 #studio p {
-  margin: 3em auto;
+  margin: 4em auto 3em;;
 }
 
 // ABOUT /////////////////////////////////////////////////////////////////////////////////
@@ -890,7 +890,7 @@ fieldset {
     display: none;
   }
 
-  .slider {
+  .slickness {
     margin: 0 -1.5em;
     width: 100vw;
   }

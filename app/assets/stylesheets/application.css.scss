@@ -5,7 +5,7 @@
 @import "style";
 @import "header";
 @import "footer";
-@import "sss";
+@import "slick-themes";
 
 //FONTS/////////////////////////////////////////////////
 
@@ -17,3 +17,7 @@
                   "baskerville/baskerville-italic", normal, italic,
                   $asset-pipeline: true,
                   $file-formats: ttf);
+@include font-face("slick",
+                  "slick/slick",
+                  $asset-pipeline: true,
+                  $file-formats: ttf eot svg woff);

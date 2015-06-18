@@ -1,13 +1,5 @@
 <div id="space-holder"></div>
 
-<!-- <section id="cart">
-  <div id="cart-container">
-    <%#= render 'spree/home/custom_cart' %>
-    <form action="/checkout">
-      <button type="submit">Check Out | $59</button>
-    </form>
-  </div>
-</section> -->
 <%= render 'header' %>
 <div id="splash-background"></div>
 <div id="main-container">
@@ -34,9 +26,17 @@
 
   <section id="studio">
     <h2>Studio</h2>
-    <div class="slider">
-      <img src="img/studio-slide-1.jpg" alt="">
-      <img src="img/studio-slide-2.jpg" alt="">
+    <div class="slickness">
+      <div><img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/studio-slide-01.jpg" alt="slider-image-1"></div>
+      <div><img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/studio-slide-02.jpg" alt="slider-image-2"></div>
+      <div><img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/studio-slide-03.jpg" alt=""></div>
+      <div><img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/studio-slide-04.jpg" alt=""></div>
+      <div><img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/studio-slide-05.jpg" alt=""></div>
+      <div><img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/studio-slide-06.jpg" alt=""></div>
+      <div><img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/studio-slide-07.jpg" alt=""></div>
+      <div><img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/studio-slide-08.jpg" alt=""></div>
+      <div><img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/studio-slide-09.jpg" alt=""></div>
+      <div><img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/studio-slide-10.jpg" alt=""></div>
     </div>
     <p class="subtext centered">Our studio includes a test kitchen bustling with freshly baked goods and special fare for our private events, appointments, and spontaneous gatherings.</p>
     <div class="expand centered">
@@ -70,7 +70,7 @@
 
   <section id="about">
     <h2>About</h2>
-    <img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/IMG_0863_about.jpg" alt="about-image">
+    <img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/about_1.png" alt="about-image">
     <div class="expand centered">
       <em>The Setting is the backdrop and the foundation of every experience</em>
     </div>
@@ -95,8 +95,3 @@
  
 <%= render 'footer' %> 
 
-<%# content_for :sidebar do %>
-  <!-- <div data-hook="homepage_sidebar_navigation"> -->
-    <%#= render :partial => 'spree/shared/taxonomies' %>
-  <!-- </div> -->
-<%# end %>
