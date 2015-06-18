@@ -1,5 +1,10 @@
-<% if defined?(image) && image %>
-  <%= image_tag image.attachment.url(:product), :itemprop => "image", class: 'show-product-image' %>
-<% else %>
-  <%= product_image(@product, :itemprop => "image", class: 'show-product-image') %>
-<% end %>
+<div class="slickness-products">
+  <% @product.images.each do |image| %>
+    <div><%= image_tag image.attachment.url(:product), :itemprop => "image", class: 'show-product-image' %></div>
+  <% end %>
+</div>
+<!--   <%# if defined?(image) && image %>
+    <%#= image_tag image.attachment.url(:product), :itemprop => "image", class: 'show-product-image' %>
+  <%# else %>
+    <%#= product_image(@product, :itemprop => "image", class: 'show-product-image') %>
+  <%# end %> -->
