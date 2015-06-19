@@ -13,6 +13,6 @@
       <% end %>
       </ul>
     </nav>
-    <a id="cart-link" class="header-link" href="/cart">Cart</a>
+    <a id="cart-link" class="header-link" href="/cart">Cart <span><%= "(#{@order.item_count})" if @order %></span></a>
   </div>
 </header>

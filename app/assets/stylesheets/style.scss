@@ -864,6 +864,10 @@ fieldset {
     padding: 0;
   }
 
+  #show-product {
+    height: 100vh;
+  }
+
   .show-product-image {
     height: 100vw;
     width: 100vw;
@@ -887,7 +891,7 @@ fieldset {
   .insert {
     border-top: none;
     border-bottom: none;
-    padding: none;
+    padding: 0;
     margin: 26px 0;
   }
 
