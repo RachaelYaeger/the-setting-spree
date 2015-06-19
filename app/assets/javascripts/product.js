@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
   var showProduct = function(url){
+    $('#loading').removeClass('hidden');
     $('#show-product').remove();
     $('body').css('opacity', 0.5);
     history.pushState(null, null, url);
@@ -8,12 +9,13 @@ $(document).ready(function() {
       console.log("calls showProduct");
       $('#products-section')
       .prepend($(data).find('#show-product'));
+      $('#loading').addClass('hidden');
       // Applies carousel to product images
       $('.slickness-products').slick({
         arrows: false,
         dots: true
       });
-      location.href = "#show-product";
+      location.href = "#show-product-section";
       $('#show-product').hide().fadeIn(200).append('<div class="x-icon close-product">×</div>'); //"x" is unicode symbol
       $('body').css('opacity', 1);
     });

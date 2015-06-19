@@ -11,6 +11,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
     <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'settingicon.ico' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
@@ -51,6 +52,10 @@
             </div>
           </div>
           <% end %>
+          
+          <div id="loading" class="hidden">
+            <img src="images/puff.svg" alt="">
+          </div>
 
           <%= yield %>
         </div>

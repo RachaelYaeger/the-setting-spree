@@ -6,6 +6,7 @@
 <%= render 'spree/home/header' %>
 
 <div id="show-product">
+  <a id="show-product-anchor" class="anchor" name="show-product-section"></a>
   <div class="show-product-container insert">
     <% cache [I18n.locale, current_currency, @product] do %>
       <div data-hook="product_show" itemscope itemtype="https://schema.org/Product">

@@ -44,6 +44,7 @@ body {
 
 section {
   margin-top: 60px;
+  position: relative;
   &:first-child {
     margin-top: 0;
   }
@@ -124,6 +125,25 @@ button {
   font-size: 1.2em;
   background-color: #BFBEBD;
   color: white;
+}
+
+// Loader
+
+#loading {
+  position: fixed;
+  left: 50%;
+  margin-top: 47vh;
+  z-index: 99999999999999;
+  img {
+    font-size: 3em;
+    position: relative;
+    left: -50%;
+  }
+}
+
+.anchor {
+  position: absolute;
+  top: -50px;
 }
 
 // FORM ////////////////////////////////////////////////////////////////////////////////
@@ -606,6 +626,10 @@ section#splash {
   }
 }
 
+.cart-remove-link {
+  font-size: 0.8em;
+}
+
 // PAYMENT ////////////////////////////////////////////////////////////////////////////////////
 
 // #payment {
@@ -876,6 +900,7 @@ fieldset {
   }
 
   .show-product-text {
+    clear: both;
     margin: 0;
     text-align: center;
     button {
@@ -1025,6 +1050,19 @@ fieldset {
       padding: 0;
       margin: 0 auto;
     }
+  }
+
+  .slickness-products {
+    width: 100vw;
+    float: none;
+  }
+
+  .slickness {
+    margin: 0 -24px;
+  }
+
+  #show-product-anchor {
+    top: 0;
   }
 
 }
