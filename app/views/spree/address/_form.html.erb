@@ -57,20 +57,21 @@
   <% end %>
   <div class="form-group" id=<%="#{address_id}country" %>>
     <%= form.label :country_id, Spree.t(:country) %><span class="required">*</span><br />
-<!--     <span id=<%#="#{address_id}country-selection" %>>
-      <%#= form.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'form-control required wrapper-dropdown'} %>
-    </span> -->
+<span id=<%#="#{address_id}country-selection" %>>
+      <%= form.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'form-control required wrapper-dropdown'} %>
+    </span>
+    <%#= form.hidden_field :country_id %>
 
 <!-- New Country Dropdown -->
-    <div id="dd" class="wrapper-dropdown" tabindex="6">
+<!--     <div id="dd" class="wrapper-dropdown" tabindex="6">
       <span>Select Country</span>
       <ul class="dropdown">
-        <% available_countries.each do |country| %>
-        <li data-country=<%= country.id.to_s %>><a href="javascript:void(0)"><%= country %></a></li>
-        <% end %>
+        <%# available_countries.each do |country| %>
+        <li data-country=<%#= country.id.to_s %>><a href="javascript:void(0)"><%#= country %></a></li>
+        <%# end %>
       </ul>
     </div>
-  </div>
+  </div> -->
 
 <!--   <p class="form-group" id=<%#="#{address_id}phone" %>>
     <%#= form.label :phone, Spree.t(:phone) %><%# if address.require_phone? %><span class="required">*</span><br /><#% end %>
