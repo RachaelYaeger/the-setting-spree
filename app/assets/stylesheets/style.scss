@@ -603,11 +603,16 @@ section#splash {
 }
 
 .cart-item-delete {
-  height: 0;
-  width: 90px;
+  opacity: 0;
+  width: 100%;
   text-align: center;
   position: absolute;
   font-style: italic;
+  cursor: pointer;
+  overflow: hidden;
+  .line-item:hover & {
+    opacity: 1;
+  }
 }
 
 #login-container {
