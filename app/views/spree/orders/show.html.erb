@@ -9,7 +9,7 @@
   <!-- <legend><%#= Spree.t(:order_number, number: @order.number) %></legend> -->
   <!-- <h1><%#= accurate_title %></h1> -->
   <%# if order_just_completed?(@order) %>
-    <h2>Thank You!</h2>
+    <h2 class="desktop">Thank You!</h2>
     <h5>Your Order Number:</h5>
     <p><%= @order.number %></p>
     <!-- <strong><%#= Spree.t(:thank_you_for_your_order) %></strong> -->
@@ -17,10 +17,10 @@
 
   <div id="order" data-hook>
     <%= render partial: 'spree/shared/order_details', locals: { order: @order } %>
-    <p>For questions and help email us: <span><a href="mailto:hello@thesettingnyc.com">hello@thesettingnyc.com</a></span></p>
+    <p class="desktop">For questions and help email us: <span><a href="mailto:hello@thesettingnyc.com">hello@thesettingnyc.com</a></span></p>
     <br class="clear" />
 
-    <p data-hook="links">
+    <p class="journal-link" data-hook="links">
       <%= link_to 'Read The Journal', spree.root_path, class: "button" %>
       <%#= link_to 'Spree.t(:back_to_store)', spree.root_path, class: "button" %>
 <!--       <%# unless order_just_completed?(@order) %>

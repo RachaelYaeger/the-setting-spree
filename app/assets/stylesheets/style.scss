@@ -31,6 +31,7 @@ body {
   background-image: url("https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/landing_1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
   width: 100%
 }
@@ -150,8 +151,8 @@ button {
 
 form {
   margin: 0 auto;
-  width: $inner-max-width;
-  padding: 0 1.5em;
+  width: 58em;
+  // padding: 0 1.5em;
   input[type=submit]{
     color: white;
     background-color: $medium-grey;
@@ -164,6 +165,8 @@ form {
     }
   }
   textarea {
+    @include appearance(none);
+    border-radius: 0;
     font-family: inherit;
     font-size: 0.8em;
     border: 1px solid $medium-grey;
@@ -194,7 +197,7 @@ form {
 
 // Matches the form id provided by rails
 #new_inquiry {
-  width: 760px;
+  width: 712px;
   input, .wrapper-dropdown {
     margin: 6px 12px 0;
     width: 330px;
@@ -229,7 +232,22 @@ label {
   margin-left: 12px;
 }
 
+select::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -3px;
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: $medium-grey transparent;
+}
+
 input, .wrapper-dropdown {
+  @include appearance(none);
+  border-radius: 0;
   font-family: inherit;
   color: $dark-grey;
   font-size: 0.8em;
@@ -268,6 +286,7 @@ input[type=checkbox], input[type=radio]{
   position: relative;
   background-color: white;
   display: inline-block;
+  padding-left: 1em;
   // vertical-align: middle;
   line-height: 42px;
   // top: -3px;
@@ -851,13 +870,25 @@ fieldset {
   }
   #splash-background {
     height: 50vh;
+    position: relative;
   }
 
   #splash .expand {
     display: none;
   }
   section#splash .splash-text {
-    padding-top: 58vh;
+    padding-top: 0;
+    @include display(flex);
+    @include justify-content(center);
+    @include flex-direction(column);
+    height: 50vh;
+    p {
+      margin-top: 0;
+    }
+  }
+
+  section#splash {
+    height: 50vh
   }
 
   #products {
@@ -875,8 +906,8 @@ fieldset {
     }
     img {
       opacity: 1;
-      width: 39vw;
-      height: 39vw;
+      width: 40vw;
+      height: 40vw;
     }
     .product-text {
       white-space: nowrap;
@@ -889,9 +920,9 @@ fieldset {
     padding: 0;
   }
 
-  #show-product {
-    height: 100vh;
-  }
+  // #show-product {
+  //   height: 100vh;
+  // }
 
   .show-product-image {
     height: 100vw;
@@ -935,7 +966,7 @@ fieldset {
   }
 
   section {
-    min-height: 100vh;
+    // min-height: 100vh;
   }
 
   .insta-img {
@@ -950,7 +981,7 @@ fieldset {
 
   input, .wrapper-dropdown {
     margin: 0 auto;
-    width: 80vw;
+    width: 90vw;
   }
 
   .login-options {
@@ -966,11 +997,11 @@ fieldset {
   }
 
   #new_inquiry {
-    width: 90%;
+    width: 100%;
     input, .wrapper-dropdown {
       display: block;
       margin: 12px auto;
-      width: 90%;
+      width: 100%;
     }
     input[type=submit]{
       display: block;
@@ -983,7 +1014,7 @@ fieldset {
       display: block;
       float: none;
       margin: 12px auto;
-      width: 90%;
+      width: 100%;
     }
   }
 
@@ -1064,6 +1095,67 @@ fieldset {
 
   #show-product-anchor {
     top: 0;
+  }
+
+  #checkout-body {
+    background-color: white;
+  }
+
+  #checkout {
+    text-align: center;
+    input {
+      width: 90vw;
+      text-align: center;
+      padding-left: 0;
+    }
+    input[type=radio]{
+      width: initial;
+      @include appearance(radio);
+    }
+    .shipping-method {
+      display: block;
+      margin-top: 2em;
+    }
+    p.checkbox {
+      width: 90vw;
+    }
+    .zipcode-field, #card_expiry {
+      width: 43vw;
+    }
+    .city-field, #card_code {
+      width: 43vw;
+      margin-left: 4vw;
+    }
+    .wrapper-dropdown {
+      width: 43vw;
+      &:last-child {
+        margin-left: 4vw;
+      }
+    }
+    .existing-credit-card-list {
+      margin: 0 auto;
+    }
+    .field {
+      margin-top: 1em;
+    }
+  }
+
+  #order_summary {
+    border: 1px solid $dark-grey;
+    margin: 5vw;
+    padding: 2em 3em 0;
+    text-align: left;
+    h5 {
+      text-align: left;
+    }
+  }
+
+  .address span:first-child, span:last-child {
+    display: block;
+  }
+
+  .journal-link {
+    position: absolute;
   }
 
 }
