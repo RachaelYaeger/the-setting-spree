@@ -5,6 +5,27 @@
   <% end %>
 <% end %>
 
+<h2 class="mobile-only">Thank You!</h2>
+
+<div id="cart-item-container" data-hook="cart_container" class="mobile-only">
+  <% if @order.present? %>
+    <div data-hook="outside_cart_form">
+      <%= form_for @order, url: update_cart_path, html: { id: 'update-cart' } do |order_form| %>
+        <div data-hook="inside_cart_form">
+
+          <div data-hook="cart_items" class="table-responsive">
+            <%= render partial: 'spree/orders/form', locals: { order_form: order_form } %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<div id="checkout-summary" data-hook="checkout_summary_box" class="mobile-only">
+  <%= render partial: 'spree/checkout/summary', locals: { order: @order } %>
+</div>
+
 <fieldset id="order_summary" data-hook>
   <!-- <legend><%#= Spree.t(:order_number, number: @order.number) %></legend> -->
   <!-- <h1><%#= accurate_title %></h1> -->
