@@ -234,6 +234,10 @@ label {
   margin-left: 12px;
 }
 
+.list-group-item:first-of-type label {
+  margin: 0;
+}
+
 select::after {
   content: "";
   width: 0;
@@ -361,6 +365,10 @@ label#use_billing > input[type=checkbox]:checked:after   {
     font-style: italic;
 }
 
+.list-group-item {
+  display: inline;
+}
+
 // SPECIAL FIELD SIZES /////////////////////////////////////
 
 .city-field {
@@ -376,7 +384,7 @@ label#use_billing > input[type=checkbox]:checked:after   {
 }
 
 .small-cc-field {
-  width: 201px;
+  width: 200px;
 }
 
 .subtext {
@@ -643,6 +651,7 @@ section#splash {
   font-style: italic;
   cursor: pointer;
   overflow: hidden;
+  font-size: 0.8em;
   .line-item:hover & {
     opacity: 1;
   }
@@ -713,6 +722,7 @@ section#splash {
   display: inline-block;
   margin-right: 0.5em;
   position: relative;
+  margin-top: 0.2em;
 }
 
 // CHECKOUT ////////////////////////////////////////////////////////////////////////////////////
@@ -736,6 +746,7 @@ section#splash {
 }
 
 #checkout {
+  text-align: center;
   position: relative;
   max-width: $outer-max-width;
   margin: 0 auto;
@@ -746,8 +757,15 @@ section#splash {
     padding-left: 1em;
     font-size: 1em;
   }
+  input[type=radio]{
+    width: initial;
+    @include appearance(radio);
+  }
   input[type=submit]{
     text-align: center;
+  }
+  .existing-credit-card-list {
+    margin: 0 auto;
   }
 }
 
@@ -755,7 +773,7 @@ section#splash {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 46px 0;
+  padding: 1.5em 0;
 }
 
 footer#checkout-footer {
@@ -785,6 +803,10 @@ footer#checkout-footer {
 .shipping-methods {
   text-align: center;
   margin: 3em 0;
+}
+
+#payment-methods {
+  text-align: left;
 }
 
 // LOGIN ////////////////////////////////////////////////////////////////////////////////////
@@ -1084,6 +1106,7 @@ fieldset {
 
   .cart-item-image {
     margin-right: 0;
+    margin-top: 0;
     float: left;
   }
 
@@ -1095,6 +1118,7 @@ fieldset {
       text-align: left;
       position: initial;
       width: initial;
+      opacity: 1;
     }
     .cart-item-cost {
       display: block;
@@ -1147,16 +1171,11 @@ fieldset {
   }
 
   #checkout {
-    text-align: center;
     input {
       width: 90vw;
       text-align: center;
       padding-left: 0;
       border: 1px solid $medium-grey;
-    }
-    input[type=radio]{
-      width: initial;
-      @include appearance(radio);
     }
     .shipping-method {
       display: block;
@@ -1179,16 +1198,13 @@ fieldset {
         margin-left: 4vw;
       }
     }
-    .existing-credit-card-list {
-      margin: 0 auto;
-    }
     .field {
       margin-top: 1em;
     }
   }
 
-  .list-group-item {
-    display: inline;
+  .shipping-method label {
+    margin-left: 0;
   }
 
   #order_summary {
@@ -1299,6 +1315,10 @@ fieldset {
   label#use_billing > input[type=checkbox]:checked:after   {
       bottom: 3px;
       right: 0px;
+  }
+
+  #payment-methods {
+    text-align: center;
   }
 
 

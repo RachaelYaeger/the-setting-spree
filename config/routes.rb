@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
 
-  get '/cart', to: redirect('/')
+  # get '/cart', to: redirect('/')
 
   post "/remove" => "application#remove"
   post "/inquiries" => "application#create_inquiry"
