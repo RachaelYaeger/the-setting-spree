@@ -5,11 +5,32 @@
   <% end %>
 <% end %>
 
+<h2 class="mobile-only">Thank You!</h2>
+
+<div id="cart-item-container" data-hook="cart_container" class="mobile-only">
+  <% if @order.present? %>
+    <div data-hook="outside_cart_form">
+      <%= form_for @order, url: update_cart_path, html: { id: 'update-cart' } do |order_form| %>
+        <div data-hook="inside_cart_form">
+
+          <div data-hook="cart_items" class="table-responsive">
+            <%= render partial: 'spree/orders/form', locals: { order_form: order_form } %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<div id="checkout-summary" data-hook="checkout_summary_box" class="mobile-only">
+  <%= render partial: 'spree/checkout/summary', locals: { order: @order } %>
+</div>
+
 <fieldset id="order_summary" data-hook>
   <!-- <legend><%#= Spree.t(:order_number, number: @order.number) %></legend> -->
   <!-- <h1><%#= accurate_title %></h1> -->
   <%# if order_just_completed?(@order) %>
-    <h2>Thank You!</h2>
+    <h2 class="desktop">Thank You!</h2>
     <h5>Your Order Number:</h5>
     <p><%= @order.number %></p>
     <!-- <strong><%#= Spree.t(:thank_you_for_your_order) %></strong> -->
@@ -17,10 +38,10 @@
 
   <div id="order" data-hook>
     <%= render partial: 'spree/shared/order_details', locals: { order: @order } %>
-    <p>For questions and help email us: <span><a href="mailto:hello@thesettingnyc.com">hello@thesettingnyc.com</a></span></p>
+    <p class="desktop">For questions and help email us: <span><a href="mailto:hello@thesettingnyc.com">hello@thesettingnyc.com</a></span></p>
     <br class="clear" />
 
-    <p data-hook="links">
+    <p class="journal-link" data-hook="links">
       <%= link_to 'Read The Journal', spree.root_path, class: "button" %>
       <%#= link_to 'Spree.t(:back_to_store)', spree.root_path, class: "button" %>
 <!--       <%# unless order_just_completed?(@order) %>

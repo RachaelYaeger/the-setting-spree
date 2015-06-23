@@ -35,7 +35,7 @@
                 <%= render 'spree/home/custom_cart' %>
                 <% if @order.present? %>
                 <form action="/checkout">
-                  <button type="submit">Check Out | <%= number_to_currency(@order.item_total) %></button>
+                  <button type="submit">Check Out | <span id="order-total"><%= number_to_currency(@order.item_total) %></span></button>
                 </form>
                 <% end %>
               </div>
@@ -52,7 +52,7 @@
             </div>
           </div>
           <% end %>
-          
+
           <div id="loading" class="hidden">
             <img src="images/puff.svg" alt="">
           </div>

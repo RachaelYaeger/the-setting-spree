@@ -7,7 +7,7 @@
     <% unless address.address2.blank? %>
     <span><%= address.address2 %></span>
     <% end %>
-    <span class="locality">, <%= address.city %></span>
+    <span class="locality"><%= address.city %></span>
     <span class="region"><%= address.state_text %></span>
     <span class="postal-code"><%= address.zipcode %></span>
     <span class="country-name"><%= address.country.try(:name) %></span>
