@@ -10,7 +10,7 @@ $(document).ready(function() {
       $('#cart, #space-holder').slideDown();
     }
   });
-  
+
   // run test on initial page load
   checkSize();
 
@@ -34,6 +34,22 @@ $(document).ready(function() {
       $(document).off('click', '#cart-link')
     }
   }
+
+  $(document).on('click', '.cart-item-delete', function(e) {
+    e.preventDefault();
+
+    $button = $(e.currentTarget)
+
+    $.post("/remove",
+      {
+        order_id: $button.data('o-id'),
+        variant_id: $button.data('v-id')
+      }
+    ).done(function( data ) {
+      $button.parents('.line-item').remove()
+      $('#order-total').text(data);
+    });
+  })
 
 })
 

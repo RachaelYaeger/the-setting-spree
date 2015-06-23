@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  include ActionView::Helpers::NumberHelper
+
   before_action :init_order
   def init_order
     @order = current_order rescue nil
@@ -19,5 +21,12 @@ class ApplicationController < ActionController::Base
       flash[:error] = "You are missing a required field in your inquiry."
       render :index
     end
+  end
+
+  def remove
+    @order = Spree::Order.find(params[:order_id])
+    @variant = @order.line_items.where(:variant_id => params[:variant_id]).first.variant
+    @order.contents.remove(@variant)
+    render plain: number_to_currency(@order.item_total)
   end
 end
