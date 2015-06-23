@@ -50,12 +50,13 @@
               </div>
 
               <div id="cart-form" data-hook="cart_form">
+
                 <%=
-                  if @order.line_items.map(&:variant_id).include?(@product.id)
-                    raw "<br><p>Item already in Cart</p>"
-                  else
-                    render :partial => 'cart_form'
-                  end
+                    if @order && @order.line_items.map(&:variant_id).include?(@product.id)
+                      raw "<br><p>Item already in Cart</p>"
+                    else
+                      render :partial => 'cart_form'
+                    end
                 %>
               </div>
             </div>
