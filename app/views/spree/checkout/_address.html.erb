@@ -16,8 +16,8 @@
   <div class="col-sm-6" data-hook="shipping_fieldset_wrapper">
     <div class="panel panel-default" id="shipping" data-hook>
       <%= form.fields_for :ship_address do |ship_form| %>
-        <div class="panel-body centered">
-          <p class="field checkbox centered" data-hook="use_billing">
+        <div class="panel-body">
+          <p class="field checkbox centered address-option" data-hook="use_billing">
             <%= label_tag :order_use_billing, :id => 'use_billing' do %>
               <%= check_box_tag 'order[use_billing]', '1', @order.shipping_eq_billing_address? %>
               <%#= Spree.t(:use_billing_address) %>

@@ -5,12 +5,11 @@
 <div id="main-container">
 
   <section id="splash">
-    <div class="splash-text centered">
-      <h2 class="mobile-only">Welcome to The Setting!</h2>
+    <div class="splash-text centered subtext">
       <p>The Setting is a collection of handmade ceramic tableware inspired by the memories shared while entertaining friends and family at home. To us, there is nothing more important than spending time with the people who matter most and no better way to do so than over a beautifully created setting.</p>
     </div>
     <div class="expand centered">
-      <em><a href="#products-section">Shop the Collection</a></em>
+      <em><a href="#product-section">Shop the Collection</a></em>
     </div>
   </section>
   
@@ -78,14 +77,15 @@
     <div class="expand centered">
       <em>The Setting is the backdrop and the foundation of every experience</em>
     </div>
-    <p class="subtext">The Setting is a curated destination to explore &amp; purchase accents for the spaces in which we live, work, eat and entertain.</p>
-    <p class="subtext">Located in Soho, New York, The Setting’s studio hosts intimate gatherings to celebrate unique experiences alongside our one of a kind products.</p>
-
+    <div class="subtext">
+      <p>The Setting is a curated destination to explore &amp; purchase accents for the spaces in which we live, work, eat and entertain.</p>
+      <p>Located in Soho, New York, The Setting’s studio hosts intimate gatherings to celebrate unique experiences alongside our one of a kind products.</p>
+    </div>
   </section>
 
   <section id="insta-feed">
     <a class="anchor" name="instagram-section"></a>
-    <h2>@thesettingnyc</h2>
+    <h2><a href="https://instagram.com/thesettingnyc/">@thesettingnyc</a></h2>
     <div id="insta-images-container">
       <% Instagram.images.each do |image| %>
         <%= image_tag image, class: 'insta-img' %>
