@@ -3,7 +3,7 @@ $(document).ready(function() {
   var showProduct = function(url){
     $('#loading').removeClass('hidden');
     $('#show-product').remove();
-    $('body').css('opacity', 0.5);
+    $('#overlay').css('display', 'initial');
     history.pushState(null, null, url);
     $.get(url, function(data){
       console.log("calls showProduct");
@@ -17,7 +17,7 @@ $(document).ready(function() {
       });
       location.href = "#show-product-section";
       $('#show-product').hide().fadeIn(200).append('<div class="x-icon close-product">×</div>'); //"x" is unicode symbol
-      $('body').css('opacity', 1);
+      $('#overlay').css('display', 'none');
     });
   }
 

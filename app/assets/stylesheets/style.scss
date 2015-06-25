@@ -118,6 +118,20 @@ button {
   display: none;
 }
 
+.loader-image {
+  width: 80px;
+}
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  z-index: 999999;
+  opacity: 0.5;
+  bottom: 0;
+  top: 0;
+  display: none;
+}
 
 
 // Styling for flash messages

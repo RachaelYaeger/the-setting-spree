@@ -54,8 +54,10 @@
           <% end %>
 
           <div id="loading" class="hidden">
-            <img src="/images/puff.svg" alt="">
+            <img class="loader-image" src="/images/loader.svg" alt="">
           </div>
+          <!-- Displays during product load to cover entire site with opaque overlay and loader -->
+          <div id="overlay"></div>
 
           <%= yield %>
         </div>
