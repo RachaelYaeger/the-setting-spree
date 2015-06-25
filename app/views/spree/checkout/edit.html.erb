@@ -34,6 +34,9 @@
 
       <div class="row" data-hook="checkout_content">
         <div class="<%= if @order.state != 'confirm' then 'col-md-9' else 'col-md-12' end %>" data-hook="checkout_form_wrapper">
+        <div class="back-button-container">
+          <a href="#" class="back-button" onclick="window.history.go(-1);return false;">Back</a>
+        </div>
           <%= form_for @order, url: update_checkout_path(@order.state), html: { id: "checkout_form_#{@order.state}" } do |form| %>
 <!--             <%# if @order.state == 'address' || !@order.email? %>
               <div class="panel panel-default">

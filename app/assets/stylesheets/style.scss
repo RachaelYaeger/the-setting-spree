@@ -163,6 +163,11 @@ button {
   top: -50px;
 }
 
+.back-button-container {
+  text-align: left;
+  font-style: italic;
+}
+
 // FORM ////////////////////////////////////////////////////////////////////////////////
 
 form {
@@ -236,6 +241,14 @@ form {
 
 .form-container {
   padding-top: 0;
+}
+
+#inquiry_email {
+  float: right;
+}
+
+#inquiry_budget {
+  float: right;
 }
 
 // CHECKOUT FORM ///////////////////////////////////////////
@@ -823,6 +836,13 @@ footer#checkout-footer {
   text-align: left;
 }
 
+#line_items {
+  display: flex;
+  justify-content: center;
+  width: 558px;
+  position: absolute;
+}
+
 // LOGIN ////////////////////////////////////////////////////////////////////////////////////
 
 #login, #signup, #registration {
@@ -1339,6 +1359,29 @@ fieldset {
     margin: 0;
     padding: 0;
   }
+
+  .back-button {
+    position: fixed;
+    top: 20px;
+    z-index: 999999999999;
+    left: 24px;
+  }
+
+  #line_items {
+    display: initial;
+    width: initial;
+    position: initial;
+  }
+
+  #inquiry_email {
+    float: none;
+  }
+
+  #inquiry_budget {
+    float: none;
+  }
+
+
 
 
 
