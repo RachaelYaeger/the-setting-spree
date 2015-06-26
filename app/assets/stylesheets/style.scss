@@ -243,12 +243,12 @@ form {
   padding-top: 0;
 }
 
-#inquiry_email {
+#inquiry_email, #inquiry_budget {
   float: right;
 }
 
-#inquiry_budget {
-  float: right;
+#inquiry_name, #inquiry_datetime {
+  float: left;
 }
 
 // CHECKOUT FORM ///////////////////////////////////////////
@@ -1373,11 +1373,7 @@ fieldset {
     position: initial;
   }
 
-  #inquiry_email {
-    float: none;
-  }
-
-  #inquiry_budget {
+  #inquiry_email, #inquiry_budget, #inquiry_name, #inquiry_datetime {
     float: none;
   }
 
