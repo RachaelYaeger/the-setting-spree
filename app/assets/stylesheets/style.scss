@@ -426,7 +426,7 @@ section#splash {
   height: 100vh;
   position: relative;
   .splash-text {
-    padding-top: 36vh;
+    padding-top: 33vh;
     margin: 0 auto;
   }
   // p {
@@ -532,14 +532,9 @@ section#splash {
   cursor: pointer;
 }
 
-.close-product {
+.close-product, .close-inquiry {
   top: 16px;
   right: 44px;
-}
-
-.close-inquiry {
-  top: 6px;
-  right: 22px;
 }
 
 .slickness-products {

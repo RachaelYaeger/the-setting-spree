@@ -6,7 +6,6 @@ $(document).ready(function() {
     $('#overlay').css('display', 'initial');
     history.pushState(null, null, url);
     $.get(url, function(data){
-      console.log("calls showProduct");
       $('#products-section')
       .prepend($(data).find('#show-product'));
       $('#loading').addClass('hidden');
