@@ -28,6 +28,10 @@ body {
   margin: 0;
 }
 
+html, body {
+  height: 100%
+}
+
 #splash-background {
   position: absolute;
   background-image: url("https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/landing_1.jpg");
@@ -43,6 +47,15 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0 1em;
+}
+
+#content {
+  min-height: 100%;
+  margin: 0 auto -200px;
+}
+
+#push {
+  height: 94px;
 }
 
 section {
@@ -489,7 +502,7 @@ section#splash {
 // SHOW PRODUCT ///////////////////////////////////////////////////////////////////////
 
 #product-details #show-product {
-  padding-top: 60px;
+  padding-top: 84px;
   // height: 100vh;
   // margin-bottom: -120px;
 }
