@@ -806,6 +806,7 @@ footer#checkout-footer {
   background: white;
   text-align: center;
   padding-top: 12px;
+  z-index: 999999999999;
 }
 
 #order_summary {
@@ -867,11 +868,11 @@ footer#checkout-footer {
     padding: 0.5em 1em;
     &:first-child {
       float: left;
-      margin-left: 2em;
+      margin-left: 1em;
     }
     &:last-child {
       float: right;
-      margin-right: 2em;
+      margin-right: 1em;
     }
   }
   .active-tab {
@@ -931,13 +932,13 @@ fieldset {
   font-size: 0.75em;
   a:first-child {
     left: 0;
-    margin-left: 3%;
+    // margin-left: 3%;
     position: absolute;
   }
   .mailer-option {
     position: absolute;
     right: 0;
-    margin-right: 3%;
+    // margin-right: 3%;
     font-style: italic;
     input {
       margin: 0 1em 0 0;
@@ -1068,7 +1069,7 @@ fieldset {
   }
 
   .login-options {
-    width: 80vw;
+    width: 84vw;
   }
 
   .login-line {
