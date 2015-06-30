@@ -21,11 +21,13 @@ $(document).ready(function() {
   function checkSize(){
     // Code for Desktop Size Only
     if ($(".mobile-only").css("display") == "none" ){
+
       // Hides and shows the remove link for the cart items
       $(".line-item").hover(function(){
         var deleteDiv = $("span");
         $(this).find(deleteDiv).toggleClass("hidden");
       })
+    
     // Code for Mobile Size Only
     } else {
       // Shows cart remove link at all times for mobile view

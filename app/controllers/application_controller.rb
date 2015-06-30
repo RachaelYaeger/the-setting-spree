@@ -29,4 +29,5 @@ class ApplicationController < ActionController::Base
     @order.contents.remove(@variant)
     render plain: number_to_currency(@order.item_total)
   end
+
 end

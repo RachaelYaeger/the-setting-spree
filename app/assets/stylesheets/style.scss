@@ -565,6 +565,19 @@ section#splash {
   }
 }
 
+#studio-slider-count, #product-slider-count {
+  position: relative;
+  margin: 0 22px;
+  text-align: center;
+}
+
+#product-slider-count {
+  clear: both;
+  float: left;
+  width: 280px;
+  margin-left: 44px;
+}
+
 #studio p {
   margin: 4em auto 3em;
 }
