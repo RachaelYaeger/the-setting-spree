@@ -1,13 +1,13 @@
 <% address_id = address_type.chars.first %>
 
 <div class="inner" data-hook=<%="#{address_type}_inner" %>>
-  <p class="form-group" id=<%="#{address_id}firstname" %>>
+  <p class="form-group required" id=<%="#{address_id}firstname" %>>
     <%= form.label :firstname, Spree.t(:first_name) %><span class="required">*</span><br />
-    <%= form.text_field :firstname, :class => 'form-control required' %>
+    <%= form.text_field :firstname, :class => 'form-control' %>
   </p>
-  <p class="form-group" id=<%="#{address_id}lastname" %>>
+  <p class="form-group required" id=<%="#{address_id}lastname" %>>
     <%= form.label :lastname, Spree.t(:last_name) %><span class="required">*</span><br />
-    <%= form.text_field :lastname, :class => 'form-control required' %>
+    <%= form.text_field :lastname, :class => 'form-control' %>
   </p>
   <% if Spree::Config[:company] %>
     <p class="form-group" id=<%="#{address_id}company" %>>
@@ -15,21 +15,21 @@
       <%= form.text_field :company, :class => 'form-control' %>
     </p>
   <% end %>
-  <p class="form-group" id=<%="#{address_id}address1" %>>
+  <p class="form-group required" id=<%="#{address_id}address1" %>>
     <%= form.label :address1, Spree.t(:street_address) %><span class="required">*</span><br />
-    <%= form.text_field :address1, :class => 'form-control  required form-full-width' %>
+    <%= form.text_field :address1, :class => 'form-control form-full-width' %>
   </p>
 <!--   <p class="form-group" id=<%#="#{address_id}address2" %>>
     <%#= form.label :address2, Spree.t(:street_address_2) %><br />
     <%#= form.text_field :address2, :class => 'form-control' %>
   </p> -->
-  <p class="form-group" id=<%="#{address_id}zipcode" %>>
+  <p class="form-group <%= 'required' if address.require_zipcode? %>" id=<%="#{address_id}zipcode" %>>
     <%= form.label :zipcode, Spree.t(:zip) %><% if address.require_zipcode? %><span class="required">*</span><br /><% end %>
-    <%= form.text_field :zipcode, :class => "form-control zipcode-field #{'required' if address.require_zipcode?}" %>
+    <%= form.text_field :zipcode, :class => "form-control zipcode-field" %>
   </p>
-  <p class="form-group" id=<%="#{address_id}city" %>>
+  <p class="form-group required" id=<%="#{address_id}city" %>>
     <%= form.label :city, Spree.t(:city) %><span class="required">*</span><br />
-    <%= form.text_field :city, :class => 'form-control required city-field' %>
+    <%= form.text_field :city, :class => 'form-control city-field' %>
   </p>
   <% if Spree::Config[:address_requires_state] %>
     <p class="form-group" id=<%="#{address_id}state" %>>
@@ -40,10 +40,10 @@
          form.collection_select(:state_id, address.country.states,
                             :id, :name,
                             {:include_blank => true},
-                            {:class => have_states ? 'form-control required wrapper-dropdown state-field' : 'form-control hidden',
+                            {:class => have_states ? 'form-control wrapper-dropdown state-field' : 'form-control hidden',
                             :disabled => !have_states}) +
          form.text_field(:state_name,
-                            :class => !have_states ? 'form-control required state-field' : 'form-control hidden',
+                            :class => !have_states ? 'form-control state-field' : 'form-control hidden',
                             :disabled => have_states)
          ].join.gsub('"', "'").gsub("\n", "")
       %>
@@ -52,13 +52,13 @@
       <% end %>
     </p>
       <noscript>
-        <%= form.text_field :state_name, :class => 'form-control required' %>
+        <%= form.text_field :state_name, :class => 'form-control' %>
       </noscript>
   <% end %>
-  <div class="form-group" id=<%="#{address_id}country" %>>
+  <div class="form-group required" id=<%="#{address_id}country" %>>
     <%= form.label :country_id, Spree.t(:country) %><span class="required">*</span><br />
-<span id=<%#="#{address_id}country-selection" %>>
-      <%= form.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'form-control required wrapper-dropdown'} %>
+    <span id=<%#="#{address_id}country-selection" %>>
+      <%= form.collection_select :country_id, available_countries, :id, :name, {}, {:class => 'form-control wrapper-dropdown'} %>
     </span>
     <%#= form.hidden_field :country_id %>
 
