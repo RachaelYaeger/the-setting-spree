@@ -1,0 +1,22 @@
+.parsley-errors-list {
+  display: none;
+}
+
+.parsley-error {
+  border: 1px solid red;
+}
+
+.alert-danger {
+  h3, p, ul li {
+    display: none;
+  }
+  ul li:first-child {
+    display: block;
+  }
+}
+
+#update-cart {
+  .alert-danger {
+    display: none;
+  }
+}
