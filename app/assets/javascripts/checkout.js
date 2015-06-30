@@ -14,7 +14,6 @@ $(document).ready(function() {
 
   // Checkout Form
   if($('#checkout_form_address').length){
-    // $('.alert-danger:first').remove()
     $('#checkout_form_address').parsley(options);
     $('#billing .required input').attr('data-parsley-required', true);
     $('#shipping .required input').attr('data-parsley-required', "false");
