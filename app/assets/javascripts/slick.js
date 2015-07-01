@@ -21,7 +21,9 @@ function ready() {
     $('.slickness').slick({
       arrows: true,
       appendArrows: '#studio-slider-count',
-      dots: false
+      dots: false,
+      autoplay: true,
+      autoplaySpeed: 3000,
     });
     
     $('.slickness-products').slick({

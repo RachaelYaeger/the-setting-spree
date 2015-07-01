@@ -268,6 +268,7 @@ form {
 
 .form-group {
   display: inline-block;
+  text-align: left;
 }
 
 label {
@@ -326,6 +327,7 @@ input, .wrapper-dropdown {
 input[type=checkbox], input[type=radio]{
   width: initial;
   height: initial;
+
 }
 
 .wrapper-dropdown {
@@ -397,11 +399,16 @@ input[type=checkbox] {
   background: white;
 }
 
-label#use_billing > input[type=checkbox]:checked:after   {
+label.custom-checkbox {
+  display: initial;
+}
+
+label.custom-checkbox > input[type=checkbox]:checked:after   {
+// label#use_billing > input[type=checkbox]:checked:after   {
     content: 'x';
     position: relative;
     bottom: 2px;
-    right: 12px;
+    // right: 12px;
     font-style: italic;
 }
 
@@ -812,6 +819,10 @@ section#splash {
   input[type=submit]{
     text-align: center;
   }
+  input[type=checkbox]{
+    padding-left: 0;
+    text-align: center;
+  }
   .existing-credit-card-list {
     margin: 0 auto;
   }
@@ -933,7 +944,7 @@ footer#checkout-footer {
     font-size: 1.3em;
   }
   label {
-    display: none;
+    // display: none;
   }
 }
 
@@ -1380,7 +1391,13 @@ fieldset {
     border: 1x solid $medium-grey;
   }
 
-  label#use_billing > input[type=checkbox]:checked:after   {
+
+  label.custom-checkbox {
+    display: initial;
+  }
+
+  label.custom-checkbox > input[type=checkbox]:checked:after   {
+  // label#use_billing > input[type=checkbox]:checked:after   {
       bottom: 3px;
       right: 0px;
   }
@@ -1403,6 +1420,10 @@ fieldset {
 
   #inquiry_email, #inquiry_budget, #inquiry_name, #inquiry_datetime {
     float: none;
+  }
+
+  .form-group {
+    text-align: center;
   }
 
 

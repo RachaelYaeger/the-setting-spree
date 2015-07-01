@@ -1,21 +1,23 @@
 <header class="centered-navigation" role="banner">
   <div class="centered-navigation-wrapper">
     <%= render 'spree/home/logo' %>
+    <div id="menu-container">
     <a href="javascript:void(0)" id="js-centered-navigation-menu-btn" class="centered-navigation-menu-btn header-link">Menu</a>
-    <nav role="navigation">
-      <ul id="js-centered-navigation-menu" class="centered-navigation-menu">
-      <% if params[:action] == "index" %>
-        <li class="nav-link"><a href="#products-section">Shop</a></li>
-        <li class="nav-link"><a href="#studio">Studio</a></li>
-        <li class="nav-link"><a href="#about">About</a></li>
-      <% else %>
-        <li class="nav-link"><a href="/#products-section">Shop</a></li>
-        <li class="nav-link"><a href="/#studio">Studio</a></li>
-        <li class="nav-link"><a href="/#about">About</a></li>
-      <% end %>
-        <li class="nav-link"><a href="http://journal.thesettingnyc.com/">Journal</a></li>
-      </ul>
-    </nav>
+      <nav role="navigation">
+        <ul id="js-centered-navigation-menu" class="centered-navigation-menu">
+        <% if params[:action] == "index" %>
+          <li class="nav-link"><a href="#studio">Studio</a></li>
+          <li class="nav-link"><a href="#products-section">Shop</a></li>
+          <li class="nav-link"><a href="#about">About</a></li>
+        <% else %>
+          <li class="nav-link"><a href="/#studio">Studio</a></li>
+          <li class="nav-link"><a href="/#products-section">Shop</a></li>
+          <li class="nav-link"><a href="/#about">About</a></li>
+        <% end %>
+          <li class="nav-link"><a href="http://journal.thesettingnyc.com">Journal</a></li>
+        </ul>
+      </nav>
+    </div>
     <a id="cart-link" class="header-link" href="/cart">Cart <span><%= "(#{@order.item_count})" if @order %></span></a>
   </div>
 </header>
