@@ -48,16 +48,6 @@
     </div>
   </section>
 
-  <section id="products-section">
-    <h2 id="products-title">Tides Collection</h2>
-    <h5>inspired by moon &amp; sea</h5>
-    <div data-hook="homepage_products">
-      <% cache(cache_key_for_products) do %>
-        <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
-      <% end %>
-    </div>
-  </section>
-
   <section id="inquiry" class="hidden">
     <div class="close-inquiry x-icon">×</div>
     <div class="form-container insert">
@@ -78,6 +68,16 @@
         </ul>
       </div>
       <%= f.submit %>
+      <% end %>
+    </div>
+  </section>
+
+  <section id="products-section">
+    <h2 id="products-title">Tides Collection</h2>
+    <h5>inspired by moon &amp; sea</h5>
+    <div data-hook="homepage_products">
+      <% cache(cache_key_for_products) do %>
+        <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
       <% end %>
     </div>
   </section>
