@@ -1,4 +1,7 @@
   <h2 class="mobile-only">Cart</h2>
+  <div class="back-button-container mobile-only">
+    <a href="#" class="back-button" onclick="window.history.go(-1);return false;">Back</a>
+  </div>
 <% if @order.nil? || @order.line_items.empty? %>
   <h2 class="cart-headline desktop">Your Cart</h2>
   <p class="desktop">There are no items in your cart.</p>

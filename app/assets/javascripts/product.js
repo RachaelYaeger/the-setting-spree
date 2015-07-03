@@ -6,7 +6,7 @@ $(document).ready(function() {
     $('#overlay').css('display', 'initial');
     history.pushState(null, null, url);
     $.get(url, function(data){
-      $('#products-section')
+      $('#homepage-products')
       .prepend($(data).find('#show-product'));
       $('#loading').addClass('hidden');
       location.href = "#show-product-section";
