@@ -1,5 +1,23 @@
 // HEADER ////////////////////////////////////////////////////////////////////////////////////
 
+#mobile-menu {
+    display: none;
+    position: fixed;
+    z-index: 9999999999;
+    background-color: white;
+    height: 160px;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    nav {
+      max-width: $outer-max-width;
+      padding: 0 2em;
+    }
+    .mobile-nav-link {
+      margin-top: 0.85em;
+    }
+}
+
 .centered-navigation {
   $base-border-radius: 3px !default;
   $centered-navigation-padding: 1em;
