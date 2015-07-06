@@ -30,6 +30,8 @@ gem 'neat'
 # http requests
 gem 'httparty'
 
+gem 'mandrill-api'
+
 
 
 # Use ActiveModel has_secure_password
