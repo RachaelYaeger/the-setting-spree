@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
     @inquiry = Inquiry.new(params.require(:inquiry).permit(:name, :email, :datetime, :budget, :message, :customer_type))
     if @inquiry.valid?
       if @inquiry.save
+        InquiryMailer.new_inquiry(@inquiry).deliver_now
         flash[:confirm] = "Your inquiry has been sent! We will contact you shortly."
         redirect_to "/"
       end
