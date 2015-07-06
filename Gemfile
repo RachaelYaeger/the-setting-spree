@@ -32,6 +32,8 @@ gem 'httparty'
 
 gem 'mandrill-api'
 
+gem 'mailchimp-api', require: 'mailchimp'
+
 
 
 # Use ActiveModel has_secure_password

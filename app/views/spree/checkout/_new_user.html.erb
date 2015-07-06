@@ -11,14 +11,21 @@
         <div data-hook="signup_inside_form">
           <%= render :partial => 'spree/shared/user_form', :locals => { :f => f } %>
           <p><%= f.submit "Log In", :class => 'btn btn-lg btn-success btn-block' %></p>
+
         </div>
-      <% end %>
+      <%# end %>
       <div class="text-center login-options">
         <!-- <a href="#">Login with Facebook</a> -->
         <div class="mailer-option">
+          <%= label_tag :mailer, "Yes, I want to stay in touch NEW", class: "custom-checkbox" do %>
+            <%= check_box_tag :mailer, 1, checked: true %>
+            Yes, I want to stay in touch
+          <% end %>
 
-          <label class="custom-checkbox"><input type="checkbox" name="mailer" id="mailer" checked>Yes, I want to stay in touch.</label>
+
+          <!-- <label class="custom-checkbox"><input type="checkbox" name="mailer" id="mailer" checked>Yes, I want to stay in touch.</label> -->
         </div>
+      <% end %>
       </div>
       <div data-hook="login_extras"></div>
     </div>
