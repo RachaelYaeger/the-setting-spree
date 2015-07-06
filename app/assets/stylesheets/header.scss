@@ -1,10 +1,15 @@
 // HEADER ////////////////////////////////////////////////////////////////////////////////////
 
+header {
+  @include transition(all 0.5s ease-in-out);
+}
+
 #mobile-menu {
     display: none;
     position: fixed;
     z-index: 9999999999;
-    background-color: white;
+    @include linear-gradient(to bottom, white 80%, rgba(255,255,255,0.88), $fallback: white);
+    background-color: transparent;
     height: 160px;
     width: 100%;
     top: 0;
@@ -49,15 +54,15 @@
 
   #logo {
     // max-height: $header-height;
-    padding: .8em 0;
-    display: block;
-    margin: 0 auto;
+    // padding: .8em 0;
+    // display: block;
+    margin: 1em auto 0;
   }
 
   .logo-container {
     width: 180px;
     margin: 0 auto;
-    padding-top: 4px; 
+    // padding-top: 12px; 
     &.short {
       height: 48px;
       overflow: hidden;
