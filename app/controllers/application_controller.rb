@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
       end
     else
       flash[:error] = "You are missing a required field in your inquiry."
-      render :index
+      redirect_to "/"
     end
   end
 
