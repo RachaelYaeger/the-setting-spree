@@ -12,7 +12,7 @@ $(document).ready(function() {
   });
   
   // Checks if device is touch
-  // if (Modernizr.touch){
+  if (Modernizr.touch){
 
     // Hides and shows mobile menu section with a sliding animation on Menu click
     $(document).on('click', '#js-centered-navigation-menu-btn', function(e) {
@@ -43,24 +43,24 @@ $(document).ready(function() {
     })
 
   // For Desktop
-  // } else {
+  } else {
 
-  //   // Shows menu on hover
-  //   $(document).on('mouseenter', '#js-centered-navigation-menu-btn', function(e) {
-  //     e.preventDefault();
-  //     $('#js-centered-navigation-menu').slideDown(function(){
-  //       if($('#js-centered-navigation-menu').is(':hidden')) {
-  //         $('#js-centered-navigation-menu').removeAttr('style');
-  //       }
-  //     });
-  //   });
+    // Shows menu on hover
+    $(document).on('mouseenter', '#js-centered-navigation-menu-btn', function(e) {
+      e.preventDefault();
+      $('#js-centered-navigation-menu').slideDown(function(){
+        if($('#js-centered-navigation-menu').is(':hidden')) {
+          $('#js-centered-navigation-menu').removeAttr('style');
+        }
+      });
+    });
 
-  //   // Hides menu on mouseleave
-  //   $(document).on('mouseleave', '#menu-container' , function(){
-  //     $('#js-centered-navigation-menu').slideUp();
-  //   });
+    // Hides menu on mouseleave
+    $(document).on('mouseleave', '#menu-container' , function(){
+      $('#js-centered-navigation-menu').slideUp();
+    });
 
-  // }
+  }
 
 
   
