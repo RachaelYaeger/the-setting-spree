@@ -562,6 +562,15 @@ section#splash {
   float: left;
 }
 
+.soldout {
+  cursor: default;
+  color: #9e9b97;
+  background-color: #f4f4f4;
+  &:hover {
+    background-color: #f4f4f4;
+  }
+}
+
 
 // STUDIO ////////////////////////////////////////////////////////////////////////////////
 

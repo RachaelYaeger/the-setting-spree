@@ -34,7 +34,11 @@
               <%= link_to truncate(product.name, length: 50), url, class: 'info', itemprop: "name", title: product.name %>
                 <div class="panel-footer text-center">
                   <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                    <span class="price selling lead" itemprop="price"><%= display_price(product) %></span>
+                    <% if product.total_on_hand < 1 %>
+                      SOLD OUT
+                    <% else %>
+                      <span class="price selling lead" itemprop="price"><%= display_price(product) %></span>
+                    <% end %>
                   </span>
                 </div>
             </div>
