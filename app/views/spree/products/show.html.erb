@@ -56,7 +56,7 @@
                 <div id="cart-form" data-hook="cart_form">
                   <%=
                     if @product.total_on_hand < 1
-                      raw "<br><button class='soldout' disabled='disabled'>Sold Out</button>"
+                      raw "<button class='soldout' disabled='disabled'>Sold Out</button>"
                     elsif @order && @order.line_items.map(&:variant_id).include?(@product.id)
                       raw "<br><p>Item already in Cart</p>"
                     else
