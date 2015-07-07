@@ -416,6 +416,18 @@ label.custom-checkbox > input[type=checkbox]:checked:after   {
   display: inline;
 }
 
+#order_summary p.service-note {
+  max-width: 500px;
+  background-color: white;
+  padding: 1em 0;
+  margin: 0 auto 3em;
+  text-align: center;
+}
+
+.push {
+  height: 100px;
+}
+
 // SPECIAL FIELD SIZES /////////////////////////////////////
 
 .city-field {
