@@ -28,7 +28,7 @@ $(document).ready(function() {
         appendArrows: '#product-slider-count',
         dots: false
       });
-      
+
       // Checks if devise if touch. Allows click to next slide if not
       if (!Modernizr.touch){
         $('.slickness-products').click(function() {
