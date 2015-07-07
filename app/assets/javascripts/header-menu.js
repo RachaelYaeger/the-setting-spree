@@ -1,15 +1,15 @@
 $(document).ready(function() {
 
-  var targetOffset = $("#studio").offset().top;
+  // var targetOffset = $("#studio").offset().top;
 
-  var $w = $(window).scroll(function(){
-      if ( $w.scrollTop() > targetOffset ) {   
-          console.log("below splash");
-          $('header').css("background-color", "rgba(255,255,255,0.88)");
-      } else {
-        $('header').css("background-color", "transparent");
-      }
-  });
+  // var $w = $(window).scroll(function(){
+  //     if ( $w.scrollTop() > targetOffset ) {   
+  //         console.log("below splash");
+  //         $('header').css("background-color", "rgba(255,255,255,0.88)");
+  //     } else {
+  //       $('header').css("background-color", "transparent");
+  //     }
+  // });
   
   // Checks if device is touch
   if (Modernizr.touch){
