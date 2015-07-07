@@ -18,6 +18,6 @@
         </ul>
       </nav>
     </div>
-    <a id="cart-link" class="header-link" href="/cart">Cart <span><%= "(#{@order.item_count})" if @order %></span></a>
+    <a id="cart-link" class="header-link" href="/cart">Cart (<span><%= @order ? "#{@order.item_count}" : "0" %></span>)</a>
   </div>
 </header>

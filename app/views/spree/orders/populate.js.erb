@@ -1,0 +1,2 @@
+$("#cart-container").html("<%= j render(:partial => 'spree/home/custom_cart') %>");
+$("#cart-link span").html("<%= @order.item_count.to_s %>")

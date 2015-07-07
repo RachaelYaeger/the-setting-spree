@@ -28,7 +28,7 @@ class ApplicationController < ActionController::Base
     @order = Spree::Order.find(params[:order_id])
     @variant = @order.line_items.where(:variant_id => params[:variant_id]).first.variant
     @order.contents.remove(@variant)
-    render plain: number_to_currency(@order.item_total)
+    render json: {item_total: number_to_currency(@order.item_total), item_count: @order.item_count}
   end
 
 end

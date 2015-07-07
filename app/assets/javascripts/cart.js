@@ -27,7 +27,7 @@ $(document).ready(function() {
         var deleteDiv = $("span");
         $(this).find(deleteDiv).toggleClass("hidden");
       })
-    
+
     // Code for Mobile Size Only
     } else {
       // Shows cart remove link at all times for mobile view
@@ -49,7 +49,8 @@ $(document).ready(function() {
       }
     ).done(function( data ) {
       $button.parents('.line-item').remove()
-      $('#order-total').text(data);
+      $('#order-total').text(data.item_total);
+      $("#cart-link span").html(data.item_count)
     });
   })
 
