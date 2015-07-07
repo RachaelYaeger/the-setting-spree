@@ -27,7 +27,7 @@ $(document).ready(function() {
         var deleteDiv = $("span");
         $(this).find(deleteDiv).toggleClass("hidden");
       })
-    
+
     // Code for Mobile Size Only
     } else {
       // Shows cart remove link at all times for mobile view
