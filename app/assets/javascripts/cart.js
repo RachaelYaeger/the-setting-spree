@@ -49,7 +49,8 @@ $(document).ready(function() {
       }
     ).done(function( data ) {
       $button.parents('.line-item').remove()
-      $('#order-total').text(data);
+      $('#order-total').text(data.item_total);
+      $("#cart-link span").html(data.item_count)
     });
   })
 
