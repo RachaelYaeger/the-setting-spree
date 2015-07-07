@@ -5,7 +5,8 @@ $dark-grey: #595959;
 $light-grey: #F4F4F4;
 $medium-grey: #BFBEBD;
 
-$show-product-height: 280px;
+// $show-product-height: 280px;
+$show-product-height: 450px;
 $product-thumb-size: 271px;
 $outer-max-width: 68em;
 $inner-max-width: 61em;
@@ -157,7 +158,7 @@ button {
   color: white;
 }
 
-// Loader
+// Loader ////////////////////////////////////////////////////////////////////////////////
 
 #loading {
   position: fixed;
@@ -543,10 +544,11 @@ section#splash {
 .show-product-text {
   position: relative;
   height: $show-product-height;
-  margin-left: 480px;
+  margin-left: 550px;
+  padding-top: 2em;
   button {
     position: absolute;
-    bottom: 0;
+    bottom: 2em;
     display: block;
   }
 }
@@ -570,7 +572,7 @@ section#splash {
 }
 
 .slickness-products {
-  width: 380px;
+  width: $show-product-height + 100px;
   float: left;
 }
 
@@ -593,7 +595,7 @@ section#splash {
 #product-slider-count {
   clear: both;
   float: left;
-  width: 280px;
+  width: $show-product-height;
   margin-left: 44px;
 }
 
