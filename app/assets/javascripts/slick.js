@@ -25,7 +25,7 @@ function ready() {
       autoplay: true,
       autoplaySpeed: 5000,
     });
-    
+
     $('.slickness-products').slick({
       arrows: true,
       appendArrows: '#product-slider-count',
