@@ -41,8 +41,18 @@
     <p class="desktop">For questions and help email us: <span><a href="mailto:hello@thesettingnyc.com">hello@thesettingnyc.com</a></span></p>
     <br class="clear" />
 
+    <div>
+      <em>
+        <p class="service-note">
+          As a reminder, we offer customization and gift wrapping services.
+          <br>
+          Please email <a href="mailto:hello@thesettingnyc.com">hello@thesettingnyc.com</a> to add to your order.
+        </p>
+      </em>
+    </div>
+
     <p class="journal-link" data-hook="links">
-      <%= link_to 'Read The Journal', 'http://journal.thesettingnyc.com', class: "button" %>
+      <%= link_to '→ Read The Journal', 'http://journal.thesettingnyc.com', class: "button" %>
       <%#= link_to 'Spree.t(:back_to_store)', spree.root_path, class: "button" %>
 <!--       <%# unless order_just_completed?(@order) %>
         <%# if try_spree_current_user && respond_to?(:spree_account_path) %>
@@ -52,5 +62,7 @@
     </p>
   </div>
 </fieldset>
+
+<div class="push"></div>
 
 <%= render 'spree/home/checkout_footer' %>

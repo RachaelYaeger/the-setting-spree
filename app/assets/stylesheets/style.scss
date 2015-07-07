@@ -5,7 +5,8 @@ $dark-grey: #595959;
 $light-grey: #F4F4F4;
 $medium-grey: #BFBEBD;
 
-$show-product-height: 280px;
+// $show-product-height: 280px;
+$show-product-height: 450px;
 $product-thumb-size: 271px;
 $outer-max-width: 68em;
 $inner-max-width: 61em;
@@ -157,7 +158,7 @@ button {
   color: white;
 }
 
-// Loader
+// Loader ////////////////////////////////////////////////////////////////////////////////
 
 #loading {
   position: fixed;
@@ -416,6 +417,18 @@ label.custom-checkbox > input[type=checkbox]:checked:after   {
   display: inline;
 }
 
+#order_summary p.service-note {
+  max-width: 500px;
+  background-color: white;
+  padding: 1em 0;
+  margin: 0 auto 3em;
+  text-align: center;
+}
+
+.push {
+  height: 100px;
+}
+
 // SPECIAL FIELD SIZES /////////////////////////////////////
 
 .city-field {
@@ -531,10 +544,11 @@ section#splash {
 .show-product-text {
   position: relative;
   height: $show-product-height;
-  margin-left: 480px;
+  margin-left: 600px;
+  padding-top: 2em;
   button {
     position: absolute;
-    bottom: 0;
+    bottom: 2em;
     display: block;
   }
 }
@@ -558,7 +572,7 @@ section#splash {
 }
 
 .slickness-products {
-  width: 380px;
+  width: $show-product-height + 100px;
   float: left;
 }
 
@@ -590,7 +604,7 @@ section#splash {
 #product-slider-count {
   clear: both;
   float: left;
-  width: 280px;
+  width: $show-product-height;
   margin-left: 44px;
 }
 
@@ -619,6 +633,17 @@ section#splash {
     padding: 0 0 0 2em;
     margin-bottom: 2em;
   }
+}
+
+// JOURNAL PROMO ////////////////////////////////////////////////////////////////////////////
+
+#journal-promo {
+  clear: both;
+  padding: 0 0 1em;
+  border-top: 1px solid #BFBEBD;
+  border-bottom: 1px solid #BFBEBD;
+  width: 60%;
+  margin: 3em auto;
 }
 
 
