@@ -37,12 +37,13 @@ header {
   z-index: 9999;
 
   .header-link {
-    line-height: $header-height + 10px;
+    line-height: $header-height;
     color: $dark-grey;
     position: absolute;
     top: 0;
     margin: 0;
     text-decoration: none;
+    padding-bottom: 1em;
     // &:focus,
     // &:hover {
     //   color: $medium-grey;
