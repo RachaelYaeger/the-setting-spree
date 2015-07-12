@@ -500,6 +500,7 @@ section#splash {
   margin: 0 20px 30px;
   cursor: pointer;
   &:hover img {
+    background-color: transparent;
     opacity: 0;
   }
   img {
@@ -508,9 +509,13 @@ section#splash {
     width: $product-thumb-size;
     height: $product-thumb-size;
     position: absolute;
+    background-color: $light-grey;
+    background-image: url("/images/loader.svg");
+    background-position: center center;
+    background-size: 32px;
+    background-repeat: no-repeat;
   }
   .product-text {
-    // text-align: center;
     font-size: 0.75em;
     margin-top: 8.5em;
     p {
