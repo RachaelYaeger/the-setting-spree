@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('#loading').removeClass('hidden');
     $('#show-product').remove();
     $('#overlay').css('display', 'initial');
-    history.pushState(null, null, url);
+    // history.pushState(null, null, url);
     $.get(url, function(data){
       $('#homepage-products')
       .prepend($(data).find('#show-product'));
