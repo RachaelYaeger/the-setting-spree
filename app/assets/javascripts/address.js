@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 var billingZipcodeField = $('#order_bill_address_attributes_zipcode');
 var shippingZipcodeField = $('#order_ship_address_attributes_zipcode');
-var ziptasticUrl = "http://ZiptasticAPI.com/"
+var ziptasticUrl = "https://ZiptasticAPI.com/"
 
 billingZipcodeField.on("input", function(data){
   getCityStateCountry("bill", data);
