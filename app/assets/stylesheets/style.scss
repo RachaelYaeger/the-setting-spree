@@ -33,6 +33,11 @@ html, body {
   height: 100%
 }
 
+button {
+  outline: none;
+  box-shadow: none;
+}
+
 #splash-background {
   position: absolute;
   background-image: url("https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/landing_1.jpg");
