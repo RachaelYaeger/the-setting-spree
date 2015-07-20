@@ -19,4 +19,11 @@
 
 $(document).ready(function(){
   console.log($.cookie);
+  function slideEmailCatch(){
+    $('#email-catch-wrapper').slideDown();
+  }
+  setTimeout(slideEmailCatch, 2000);
+  $(document).on('click', '.close-email-catch', function(){
+    $('#email-catch-wrapper').slideUp();
+  })
 })

@@ -18,35 +18,16 @@ footer {
   p {
     margin: 0;
     position: absolute;
+    span:first-child {
+      margin-left: 0;
+    }
     span {
       margin-left: 4em;
     }
   }
-  .email-signup {
-    position: absolute;
-    right: 0;
-    input {
-      background-color: transparent;
-      border-bottom: 1px solid $dark-grey;
-      width: 270px;
-      height: 28px;
-      margin: 0;
-      // @include placeholder {
-      //   color: $medium-grey;
-      // }
-    }
-    button {
-      width: 70px;
-      background-color: transparent;
-      color: $dark-grey;
-      vertical-align: sub;
-      font-style: italic;
-      font-size: inherit;
-    }
-  }
 }
 
-@media only screen and (max-width: 665px){
+@media only screen and (max-width: 1000px){
 
   footer {
     height: 180px;
