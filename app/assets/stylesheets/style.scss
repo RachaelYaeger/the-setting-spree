@@ -33,6 +33,11 @@ html, body {
   height: 100%
 }
 
+button {
+  outline: none;
+  box-shadow: none;
+}
+
 #splash-background {
   position: absolute;
   background-image: url("https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/landing_1.jpg");
@@ -157,6 +162,76 @@ button {
   font-size: 1.2em;
   background-color: $medium-grey;
   color: white;
+}
+
+.email-signup {
+  position: absolute;
+  right: 0;
+  input {
+    background-color: transparent;
+    border-bottom: 1px solid $dark-grey;
+    width: 270px;
+    height: 28px;
+    margin: 0;
+  }
+  button {
+    width: 70px;
+    background-color: transparent;
+    color: $dark-grey;
+    vertical-align: sub;
+    font-style: italic;
+    font-size: inherit;
+  }
+}
+
+#email-catch-wrapper{
+  background-color: $light-grey;
+  // height: 60px;
+  margin: 0 -2em;
+  display: none;
+}
+
+#email-catch {
+  width: 1006px;
+  margin: 0 auto;
+  line-height: 60px;
+  white-space: nowrap;
+  font-size: 15px;
+  padding: 0 2em;
+  p {
+    display: inline;
+  }
+  form {
+    width: initial;
+    position: relative;
+    input {
+      text-align: left;
+      @include placeholder {
+        color: $dark-grey;
+        font-size: 15px;
+      }
+    }
+    button {
+      position: absolute;
+      left: 224px;
+      bottom: 14px;
+      width: 46px;
+      font-size: 1.4em;
+    }
+  }
+  .email-signup {
+    display: inline-block;
+    position: initial;
+    right: initial;
+    margin-left: 4em;
+  }
+  .close-email-catch {
+    position: absolute;
+    right: 12px;
+    top: -12px;
+    font-size: 1em;
+    color: $dark-grey;
+  }
 }
 
 // Loader ////////////////////////////////////////////////////////////////////////////////
@@ -1085,10 +1160,6 @@ fieldset {
     padding: 0;
   }
 
-  // #show-product {
-  //   height: 100vh;
-  // }
-
   .show-product-image {
     height: 100vw;
     width: 100vw;
@@ -1117,7 +1188,7 @@ fieldset {
     margin: 3em 0 6em;
   }
 
-  .x-icon {
+  .close-product, .close-inquiry {
     display: none;
   }
 
@@ -1477,11 +1548,42 @@ fieldset {
     margin: 0 auto 2em;
   }
 
+}
 
-
-
-
-
-
+@media only screen and (max-width: 1000px){
+  #products {
+    max-width: 40em;
+    margin: 0 auto;
+  }
+  #email-catch-wrapper {
+    padding-bottom: 1em;
+    #email-catch {
+      width: initial;
+      line-height: initial;
+      white-space: initial;
+      p {
+        padding: 2em 0 1em;
+        display: block;
+        text-align: center;
+        margin: 0;
+      }
+      .email-signup {
+        margin-left: 0;
+        display: block;
+        text-align: center;
+        form {
+          width: 270px;
+        }
+        button {
+          position: absolute;
+          bottom: 0;
+          height: initial;
+        }
+      }
+      .close-email-catch {
+        top: 12px;
+      }
+    }
+  }
 }
 
