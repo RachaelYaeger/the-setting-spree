@@ -185,8 +185,7 @@ button {
 }
 
 #email-catch-wrapper{
-  background-color: $light-grey;
-  // height: 60px;
+  background-color: #fff;
   margin: 0 -2em;
   display: none;
 }
@@ -697,7 +696,10 @@ section#splash {
 
 #about {
   img {
-    width: 100%;
+    // width: 100%;
+    max-height: 475px;
+    display: block;
+    margin: 0 auto;
   }
   div.expand {
     margin: 2em 0;
@@ -1309,6 +1311,7 @@ fieldset {
     img {
       margin: 0 -1em;
       width: 100vw;
+      max-height: initial;
     }
     p:first-of-type {
       width: 100%;
