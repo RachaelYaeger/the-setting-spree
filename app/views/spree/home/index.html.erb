@@ -13,6 +13,16 @@
     </div>
   </section>
 
+  <section id="products-section">
+    <h2 id="products-title">Shop</h2>
+    <!-- <h5>tides collection: inspired by moon &amp; sea</h5> -->
+    <div id="homepage-products" data-hook="homepage_products">
+      <% cache(cache_key_for_products) do %>
+        <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+      <% end %>
+    </div>
+  </section>
+
   <section id="studio">
     <h2>Studio</h2>
     <div class="slickness">
@@ -68,16 +78,6 @@
         </ul>
       </div>
       <%= f.submit %>
-      <% end %>
-    </div>
-  </section>
-
-  <section id="products-section">
-    <h2 id="products-title">Shop</h2>
-    <!-- <h5>tides collection: inspired by moon &amp; sea</h5> -->
-    <div id="homepage-products" data-hook="homepage_products">
-      <% cache(cache_key_for_products) do %>
-        <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
       <% end %>
     </div>
   </section>
