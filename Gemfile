@@ -34,6 +34,7 @@ gem 'mandrill-api'
 
 gem 'mailchimp-api', require: 'mailchimp'
 
+gem 'jquery-cookie-rails'
 
 
 # Use ActiveModel has_secure_password
