@@ -184,10 +184,18 @@ button {
   }
 }
 
+#email-catch-space-holder {
+  display: none;
+  position: relative;
+  height: 60px;
+  background-color: #fff;
+}
+
 #email-catch-wrapper{
   background-color: #fff;
-  margin: 0 -2em;
+  margin: -60px -2em 0;
   display: none;
+  position: relative;
 }
 
 #email-catch {
@@ -1106,6 +1114,7 @@ fieldset {
   .mobile-only {
     display: initial;
   }
+
   #splash-background {
     height: 50vh;
     position: relative;
@@ -1426,10 +1435,6 @@ fieldset {
     display: inline;
   }
 
-  // #checkout input[type=checkbox], input[type=radio]{
-  //   border: none;
-  // }
-
   #checkout-summary.mobile-only {
     position: initial;
     table {
@@ -1460,14 +1465,6 @@ fieldset {
   }
 
   #cart-item-container.mobile-only {
-    // #line_items {
-    //   display: block;
-    //   width: initial;
-    //   position: initial;
-    //   border-top: 1px solid $medium-grey;
-    //   width: 90vw;
-    //   margin: 0 auto;
-    // }
     .line-item {
       width: 90vw;
       div:nth-child(2n) {
@@ -1511,7 +1508,6 @@ fieldset {
   }
 
   label.custom-checkbox > input[type=checkbox]:checked:after   {
-  // label#use_billing > input[type=checkbox]:checked:after   {
       bottom: 3px;
       right: 0px;
   }
@@ -1547,6 +1543,14 @@ fieldset {
     margin: 0 auto 2em;
   }
 
+  #email-catch-space-holder {
+    height: 123px;
+  }
+
+  #email-catch-wrapper{
+    margin: -123px -2em 0;
+  }
+
 }
 
 @media only screen and (max-width: 1000px){
@@ -1580,7 +1584,7 @@ fieldset {
         }
       }
       .close-email-catch {
-        top: 12px;
+        top: 9px;
       }
     }
   }
