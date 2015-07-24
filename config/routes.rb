@@ -1,4 +1,12 @@
+Spree::Core::Engine.add_routes do
+  namespace :admin do
+    resource :site_settings, only: [:edit, :update]
+  end
+end
+
+
 Rails.application.routes.draw do
+  resources :site_settings
   # root 'home#index'
 
   # This line mounts Spree's routes at the root of your application.

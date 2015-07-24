@@ -1,0 +1,59 @@
+<div data-hook="admin_mail_method_form_fields">
+  <div class="row">
+
+    <div class="col-md-6">
+      <fieldset>
+        <legend>Top Banner</legend>
+
+        <div class="form-group">
+          <%= f.label :intro_text %>
+          <%= f.text_area :intro_text, class: 'form-control' %>
+        </div>
+
+        <div data-hook="file" class="form-group">
+          <%= f.label :banner_image, "Banner Image" %>
+          <%= f.file_field :banner_image %>
+        </div>
+
+      </fieldset>
+
+      <br/>
+
+      <fieldset>
+        <legend>About</legend>
+
+        <div data-hook="file" class="form-group">
+          <%= f.label :about_image, "About Image" %>
+          <%= f.file_field :about_image %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :about_caption %>
+          <%= f.text_area :about_caption, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :about_text_left %>
+          <%= f.text_area :about_text_left, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :about_text_right %>
+          <%= f.text_area :about_text_right, class: 'form-control' %>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="col-md-6">
+
+      <fieldset>
+        <legend>Studio</legend>
+
+        <div class="form-group">
+          <%= f.label :studio_caption %>
+          <%= f.text_area :studio_caption, class: 'form-control' %>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>

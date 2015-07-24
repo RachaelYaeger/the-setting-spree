@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150603165732) do
+ActiveRecord::Schema.define(version: 20150724220302) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,24 @@ ActiveRecord::Schema.define(version: 20150603165732) do
     t.string   "customer_type"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "site_settings", force: :cascade do |t|
+    t.text     "intro_text"
+    t.string   "studio_caption"
+    t.string   "about_caption"
+    t.string   "about_text_left"
+    t.string   "about_text_right"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "banner_image_file_name"
+    t.string   "banner_image_content_type"
+    t.integer  "banner_image_file_size"
+    t.datetime "banner_image_updated_at"
+    t.string   "about_image_file_name"
+    t.string   "about_image_content_type"
+    t.integer  "about_image_file_size"
+    t.datetime "about_image_updated_at"
   end
 
   create_table "spree_addresses", force: :cascade do |t|
@@ -1003,5 +1021,15 @@ ActiveRecord::Schema.define(version: 20150603165732) do
 
   add_index "spree_zones", ["default_tax"], name: "index_spree_zones_on_default_tax", using: :btree
   add_index "spree_zones", ["kind"], name: "index_spree_zones_on_kind", using: :btree
+
+  create_table "studio_slides", force: :cascade do |t|
+    t.integer  "position"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "slide_image_file_name"
+    t.string   "slide_image_content_type"
+    t.integer  "slide_image_file_size"
+    t.datetime "slide_image_updated_at"
+  end
 
 end

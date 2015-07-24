@@ -1,0 +1,13 @@
+<% content_for :page_title do %>
+  Site Settings
+<% end %>
+
+<% content_for :page_actions do %>
+<% end %>
+
+<%= form_for @site_setting, url: admin_site_settings_path, method: :put do |f| %>
+  <fieldset>
+    <%= render 'form', f: f %>
+    <div class="form-actions actions" data-hook="buttons"><%= button Spree.t('actions.update'), 'update' %></div>
+  </fieldset>
+<% end %>
