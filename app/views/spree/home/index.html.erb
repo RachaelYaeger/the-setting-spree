@@ -2,12 +2,12 @@
 <div id="email-catch-space-holder"></div>
 
 <%= render 'header' %>
-<div id="splash-background"></div>
+<div id="splash-background" style="background-image: url(<%= @ss.banner_image.url %>);"></div>
 <div id="main-container">
 
   <section id="splash">
     <div class="splash-text centered subtext">
-      <p>The Setting is a curated destination to explore &amp; purchase accents for the spaces in which we live, work, eat and entertain. To us, there is nothing more important than spending time with the people who matter most and no better way to do so than over a beautifully created setting.</p>
+      <p><%= raw @ss.intro_text %></p>
     </div>
     <div class="expand centered nav-link">
       <em><a id="collection-link" href="#products-section">→ Shop the Collection</a></em>
@@ -53,7 +53,7 @@
       </div>
     </div>
     <div id="studio-slider-count"><em><span class="pagingInfo"></span></em></div>
-    <p class="subtext centered">Our studio includes a test kitchen bustling with freshly baked goods and special fare for our private events, appointments, and spontaneous gatherings.</p>
+    <p class="subtext centered"><%= @ss.studio_caption %></p>
     <div class="expand centered">
       <em><a href="javascript:showInquiry()">→ Make an inquiry</a></em>
     </div>
@@ -85,13 +85,13 @@
 
   <section id="about">
     <h2>About</h2>
-    <img src="https://s3.amazonaws.com/the-setting-staging.herokuapp.com/spree/general-images/about_1.png" alt="about-image">
+    <img src="<%= @ss.about_image.url %>" alt="about-image">
     <div class="expand centered">
-      <em>The Setting is the backdrop and the foundation of every experience</em>
+      <em><%= @ss.about_caption %></em>
     </div>
     <div class="subtext">
-      <p>The Setting is inspired by the memories shared while entertaining friends and family at home.</p>
-      <p>Located in Soho, New York, The Setting’s studio hosts intimate gatherings to celebrate unique experiences alongside our one of a kind products.</p>
+      <p><%= @ss.about_text_left %></p>
+      <p><%= @ss.about_text_right %></p>
     </div>
   </section>
 
@@ -118,5 +118,5 @@
   </section>
 
 </div> <!-- Closes Main Container div -->
- 
-<%= render 'footer' %> 
+
+<%= render 'footer' %>
