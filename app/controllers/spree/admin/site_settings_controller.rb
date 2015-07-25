@@ -4,6 +4,7 @@ module Spree
       before_action :set_site_setting, only: [:edit, :update]
 
       def edit
+        @site_setting = SiteSetting.first
       end
 
       def update

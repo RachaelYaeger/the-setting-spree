@@ -1024,6 +1024,7 @@ ActiveRecord::Schema.define(version: 20150724220302) do
 
   create_table "studio_slides", force: :cascade do |t|
     t.integer  "position"
+    t.integer  "site_setting_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.string   "slide_image_file_name"
