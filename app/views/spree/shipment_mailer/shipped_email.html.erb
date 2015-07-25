@@ -1,23 +1,23 @@
-<table>
+<table style="width: 100%">
   <tr style="font-family:Garamond, Baskerville, 'Times New Roman', serif;">
     <td align="center">
         <!-- <td><img src="https://www.thesettingnyc.com/images/the_setting_logo.png" alt=""></td> -->
         <img style="width:100px !important; float:none !important; margin:0 auto; padding-bottom: 40px" src="http://i.imgur.com/rjDWT1w.png?1" alt="The Setting">
         <p class="lede" style="text-align:center; font-size:24px; font-style:italic; font-wieght:bold; font-family:Garamond, Baskerville, 'Times New Roman', serif;">
-          Thank You!
+          Your Order is on its way!
         </p>
         <br>
         <p style="text-align:center; font-family:Garamond, Baskerville, 'Times New Roman', serif; font-size:16px">
-          <%= Spree.t('order_mailer.confirm_email.instructions') %>
+          We packed and shipped your order today. It should be arriving soon.
         </p>
         <br>
       <table style="width: 70%;margin: 0 auto;">
         <tr>
           <td><p style="font-family:Garamond, Baskerville, 'Times New Roman', serif;font-size:16px"><%= Spree.t('order_mailer.confirm_email.order_summary') %></p></td>
           <td></td>
-          <td style="text-align:right"><p style="font-family:Garamond, Baskerville, 'Times New Roman', serif;text-align:right;font-size:16px">Order Number: <%= @order.number %></p></td>
+          <td style="text-align:right"><p style="font-family:Garamond, Baskerville, 'Times New Roman', serif;text-align:right;font-size:16px">Order Number: <%= @shipment.order.number %></p></td>
         </tr>
-        <% @order.line_items.each do |item| %>
+        <% @shipment.line_items.each do |item| %>
           <tr>
             <td><p style="font-family:Garamond, Baskerville, 'Times New Roman', serif;"><%= raw(item.variant.product.name) %></p></td>
             <td></td>
@@ -28,37 +28,37 @@
           <td></td>
           <td></td>
           <td style="text-align:right">
-            <p style="font-family:Garamond, Baskerville, 'Times New Roman', serif;text-align:right;font-size:16px"><%= Spree.t('order_mailer.confirm_email.subtotal') %> <%= @order.display_item_total %></p>
+            <p style="font-family:Garamond, Baskerville, 'Times New Roman', serif;text-align:right;font-size:16px"><%= Spree.t('order_mailer.confirm_email.subtotal') %> <%= @shipment.order.display_item_total %></p>
           </td>
         </tr>
-        <% if @order.line_item_adjustments.exists? %>
-          <% if @order.all_adjustments.promotion.eligible.exists? %>
-            <% @order.all_adjustments.promotion.eligible.group_by(&:label).each do |label, adjustments| %>
+        <% if @shipment.order.line_item_adjustments.exists? %>
+          <% if @shipment.order.all_adjustments.promotion.eligible.exists? %>
+            <% @shipment.order.all_adjustments.promotion.eligible.group_by(&:label).each do |label, adjustments| %>
               <tr>
                 <td></td>
                 <td></td>
-                <td style="text-align:right"><p style="font-family:Garamond, Baskerville, 'Times New Roman', serif;text-align:right;font-size:16px"><%= Spree.t(:promotion) %> <%= label %>: <%= Spree::Money.new(adjustments.sum(&:amount), currency: @order.currency) %></p></td>
+                <td style="text-align:right"><p style="font-family:Garamond, Baskerville, 'Times New Roman', serif;text-align:right;font-size:16px"><%= Spree.t(:promotion) %> <%= label %>: <%= Spree::Money.new(adjustments.sum(&:amount), currency: @shipment.order.currency) %></p></td>
               </tr>
             <% end %>
           <% end %>
         <% end %>
-        <% @order.shipments.group_by { |s| s.selected_shipping_rate.try(:name) }.each do |name, shipments| %>
+        <% @shipment.order.shipments.group_by { |s| s.selected_shipping_rate.try(:name) }.each do |name, shipments| %>
           <tr>
             <td></td>
             <td></td>
-            <td style="text-align:right"><p style="font-family:Garamond, Baskerville, 'Times New Roman', serif; text-align:right;font-size:16px"><%= Spree.t(:shipping) %> <%= name %>: <%= Spree::Money.new(shipments.sum(&:discounted_cost), currency: @order.currency) %></p></td>
+            <td style="text-align:right"><p style="font-family:Garamond, Baskerville, 'Times New Roman', serif; text-align:right;font-size:16px"><%= Spree.t(:shipping) %> <%= name %>: <%= Spree::Money.new(shipments.sum(&:discounted_cost), currency: @shipment.order.currency) %></p></td>
           </tr>
         <% end %>
-        <% if @order.all_adjustments.eligible.tax.exists? %>
-          <% @order.all_adjustments.eligible.tax.group_by(&:label).each do |label, adjustments| %>
+        <% if @shipment.order.all_adjustments.eligible.tax.exists? %>
+          <% @shipment.order.all_adjustments.eligible.tax.group_by(&:label).each do |label, adjustments| %>
             <tr>
               <td></td>
               <td></td>
-              <td style="text-align:right"><p style="font-family:Garamond, Baskerville, 'Times New Roman', serif; text-align:right;font-size:16px"><%= Spree.t(:tax) %> <%= label %>: <%= Spree::Money.new(adjustments.sum(&:amount), currency: @order.currency) %></p></td>
+              <td style="text-align:right"><p style="font-family:Garamond, Baskerville, 'Times New Roman', serif; text-align:right;font-size:16px"><%= Spree.t(:tax) %> <%= label %>: <%= Spree::Money.new(adjustments.sum(&:amount), currency: @shipment.order.currency) %></p></td>
             </tr>
           <% end %>
         <% end %>
-        <% @order.adjustments.eligible.each do |adjustment| %>
+        <% @shipment.order.adjustments.eligible.each do |adjustment| %>
           <% next if (adjustment.source_type == 'Spree::TaxRate') and (adjustment.amount == 0) %>
           <tr>
             <td></td>
@@ -70,7 +70,7 @@
           <td></td>
           <td></td>
           <td style="text-align:right">
-            <p style="font-family:Garamond, Baskerville, 'Times New Roman', serif; text-align:right;font-size:16px"><%= Spree.t('order_mailer.confirm_email.total') %> <%= @order.display_total %></p>
+            <p style="font-family:Garamond, Baskerville, 'Times New Roman', serif; text-align:right;font-size:16px"><%= Spree.t('order_mailer.confirm_email.total') %> <%= @shipment.order.display_total %></p>
           </td>
         </tr>
         <tr>
@@ -81,11 +81,11 @@
         </tr>
       </table>
       <p style="text-align:center; font-family:Garamond, Baskerville, 'Times New Roman', serif;font-size:16px;">
-        Pieces are made to order and will ship within 5-6 weeks unless otherwise noted.
+        <%= Spree.t('shipment_mailer.shipped_email.track_information', :tracking => @shipment.tracking)     if @shipment.tracking %>
       </p>
       <br>
       <p style="text-align:center; font-family:Garamond, Baskerville, 'Times New Roman', serif;font-size:16px;">
-      As a reminder, we offer customization and gift wrapping services please email <a href="mailto:hello@thesettingnyc.com">hello@thesettingnyc.com</a> to add to your order.
+      <%= Spree.t('shipment_mailer.shipped_email.track_link',        :url      => @shipment.tracking_url) if @shipment.tracking_url %>
       </p>
       <br>
       <p style="text-align:center; font-family:Garamond, Baskerville, 'Times New Roman', serif;font-size:16px;">
@@ -96,6 +96,6 @@
         xx The Setting
       </p>
     </td>
-    <td class="expander"></td>
+    <!-- <td class="expander"></td> -->
   </tr>
 </table>
