@@ -747,7 +747,7 @@ section#splash {
 }
 
 #insta-images-container {
-  margin: 2em 0 1em; 
+  margin: 2em 0 1em;
 }
 
 .insta-img {
@@ -1054,7 +1054,7 @@ footer#checkout-footer {
   width: 438px;
   border-top: 1px solid $medium-grey;
   height: 10px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .login-body {
@@ -1276,7 +1276,7 @@ fieldset {
       }
     }
   }
-  
+
   #cart-container {
     text-align: center;
     padding-top: 2em;
@@ -1442,14 +1442,21 @@ fieldset {
           display:block;
           border-bottom: 1px solid $medium-grey;
           border-collapse: separate;
-          border-spacing: 0 1em; 
+          border-spacing: 0 1em;
           width: 90vw;
       }
       tbody:first-child {
-        border-top: 1px solid $medium-grey; 
+        border-top: 1px solid $medium-grey;
+      }
+      tbody:nth-child(2){
+        display: none;
       }
       td:first-child {
           width: 90vw;
+      }
+      td:nth-child(2) {
+        width: 20vw;
+        text-align: right;
       }
     }
   }

@@ -17,20 +17,3 @@ SiteSetting.create(
   about_text_left: "The Setting is inspired by the memories shared while entertaining friends and family at home.",
   about_text_right: "Located in Soho, New York, The Setting’s studio hosts intimate gatherings to celebrate unique experiences alongside our one of a kind products."
 )
-
-
-t.text     "intro_text"
-t.string   "studio_caption"
-t.string   "about_caption"
-t.string   "about_text_left"
-t.string   "about_text_right"
-t.datetime "created_at",                null: false
-t.datetime "updated_at",                null: false
-t.string   "banner_image_file_name"
-t.string   "banner_image_content_type"
-t.integer  "banner_image_file_size"
-t.datetime "banner_image_updated_at"
-t.string   "about_image_file_name"
-t.string   "about_image_content_type"
-t.integer  "about_image_file_size"
-t.datetime "about_image_updated_at"

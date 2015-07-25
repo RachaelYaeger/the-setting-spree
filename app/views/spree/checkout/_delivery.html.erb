@@ -91,6 +91,15 @@
         <%= form.text_area :special_instructions, :cols => 40, :rows => 4, :class => "form-control" %>
       </p>
     <% end %>
+
+    <div class="panel-heading">
+      <h2 class="panel-title">Promo Code</h2>
+    </div>
+    <p class='field' data-hook='coupon_code'>
+      <%#= form.label :coupon_code, "Promo Code" %>
+      <%= form.text_field :coupon_code, :class => 'form-control' %>
+    </p>
+
   </div>
 </div>
 
