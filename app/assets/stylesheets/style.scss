@@ -1107,7 +1107,7 @@ fieldset {
   }
 }
 
-@media only screen and (max-width: 665px){
+@media only screen and (max-width: 720px){
   $product-thumb-size: 133px;
 
   .mobile-only {
@@ -1540,7 +1540,7 @@ fieldset {
 
 @media only screen and (max-width: 1000px){
   #products {
-    max-width: 40em;
+    max-width: 627px;
     margin: 0 auto;
   }
   #email-catch-wrapper {
