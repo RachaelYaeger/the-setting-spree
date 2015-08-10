@@ -1162,27 +1162,6 @@ fieldset {
     }
   }
 
-  #products-section #show-product {
-    padding: 0;
-  }
-
-  .show-product-image {
-    height: 100vw;
-    width: 100vw;
-    float: none;
-    margin: 0;
-  }
-
-  .show-product-text {
-    clear: both;
-    margin: 0;
-    text-align: center;
-    button {
-      position: initial;
-      display: initial;
-    }
-  }
-
   #main-image {
     margin: 0 -1em;
   }
@@ -1594,5 +1573,48 @@ fieldset {
       }
     }
   }
+
+  #products-section #show-product {
+    padding: 0;
+  }
+
+  #show-product {
+    .slickness-products {
+      width: 100vw;
+      float: none;
+    }
+
+    .slickness {
+      margin: 0 -1em;
+    }
+
+    #main-image {
+      margin: 0 -1em;
+    }
+
+    #product-slider-count {
+      float: none;
+      margin: 0 auto;
+    }
+
+    .show-product-image {
+      height: 100vw;
+      width: 100vw;
+      float: none;
+      margin: 0;
+    }
+
+    .show-product-text {
+      clear: both;
+      margin: 0;
+      text-align: center;
+      button {
+        position: initial;
+        display: initial;
+      }
+    }
+
+  }
+
 }
 
