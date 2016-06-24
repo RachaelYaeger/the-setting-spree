@@ -13,7 +13,6 @@
 /tmp
 
 .DS_Store
-*.sublime-workspace
-*.sublime-project
+*.sublime*
 # Ignore application configuration
 /config/application.yml
