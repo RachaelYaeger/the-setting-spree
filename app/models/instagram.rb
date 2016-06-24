@@ -9,5 +9,7 @@ class Instagram
       images << obj["images"]["low_resolution"]["url"]
     end
     return images
+  rescue
+    return []
   end
 end
