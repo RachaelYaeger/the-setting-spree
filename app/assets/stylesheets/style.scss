@@ -350,6 +350,12 @@ form {
 #inquiry_name, #inquiry_datetime {
   float: left;
 }
+#inquiry-response {
+  text-align: center;
+  &.error {
+    color: red;
+  }
+}
 
 // CHECKOUT FORM ///////////////////////////////////////////
 

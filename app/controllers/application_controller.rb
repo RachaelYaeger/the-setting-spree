@@ -12,15 +12,17 @@ class ApplicationController < ActionController::Base
 
   def create_inquiry
     @inquiry = Inquiry.new(params.require(:inquiry).permit(:name, :email, :datetime, :budget, :message, :customer_type))
-    if @inquiry.valid?
-      if @inquiry.save
-        InquiryMailer.new_inquiry(@inquiry).deliver_now
-        flash[:confirm] = "Your inquiry has been sent! We will contact you shortly."
-        redirect_to "/"
-      end
+    if @inquiry.valid? && @inquiry.save
+      InquiryMailer.new_inquiry(@inquiry).deliver_now
+      render js: "
+        $('#inquiry-response').attr('class', '')
+        $('#inquiry-response').html('Your inquiry has been sent! We will contact you shortly.');
+      "
     else
-      flash[:error] = "You are missing a required field in your inquiry."
-      redirect_to "/"
+      render js: "
+        $('#inquiry-response').attr('class', 'error')
+        $('#inquiry-response').html('You are missing a required field in your inquiry.');
+      "
     end
   end
 
