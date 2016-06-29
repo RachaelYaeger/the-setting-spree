@@ -4,6 +4,9 @@ Spree::HomeController.class_eval do
   def index
     @searcher = build_searcher(params.merge(include_images: true))
     @products = @searcher.retrieve_products.order("grid_position ASC")
+    # @taxon = Spree::Taxon.find_by(name: "Home")
+    # @searcher = build_searcher(params.merge(include_images: true, taxon: @taxon))
+    # @products = @searcher.retrieve_products()
     @taxonomies = Spree::Taxonomy.includes(root: :children)
   end
 

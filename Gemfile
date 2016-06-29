@@ -50,7 +50,7 @@ gem 'aws-sdk', '~> 2'
 
 gem 'pry-rails'
 
-gem "autoprefixer-rails"
+gem 'autoprefixer-rails'
 
 gem 'bourbon'
 gem 'neat'
