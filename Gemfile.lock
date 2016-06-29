@@ -385,6 +385,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   aws-sdk (~> 2)
   bourbon
   byebug
