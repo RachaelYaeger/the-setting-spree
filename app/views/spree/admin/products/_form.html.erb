@@ -203,13 +203,6 @@
       <% end %>
     </div>
 
-    <div data-hook="admin_product_form_additional_fields">
-      <%= f.field_container :grid_position, class: ['form-group'] do %>
-        <%= f.label :grid_position, "Grid Position" %>
-        <%= f.text_field :grid_position, class: 'form-control' %>
-      <% end %>
-    </div>
-
   </div>
 
   <% unless Rails.env.test? %>
