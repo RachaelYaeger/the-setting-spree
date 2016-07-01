@@ -46,7 +46,7 @@ gem 'honeybadger', '~> 2.6.0'
 
 gem 'rails_12factor', group: :production
 
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '< 2.0'
 
 gem 'pry-rails'
 
